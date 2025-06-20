@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+:root {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  color: whitesmoke;
+}
+
+@layer utilities {
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%)
+    }
+    100% {
+      transform: translateX(250%)
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

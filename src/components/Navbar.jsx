@@ -29,7 +29,8 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-40 backdrop-blur-lg border-b border-white/10  transition-transform ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
+            className={`fixed top-0 w-full z-40 backdrop-blur-lg border-b border-white/10  transition-transform 
+            ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
         >
             <div className="max-w-5xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
@@ -38,7 +39,7 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
                     </a>
 
                     <div
-                        className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
+                        className="w-7 h-7 relative cursor-pointer z-40 md:hidden text-2xl"
                         onClick={() => setMenuOpen((prev) => !prev)}
                     >
                         &#9776;

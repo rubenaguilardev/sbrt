@@ -64,14 +64,14 @@ const Work = () => {
     return (
         <section id='work' className='flex items-center justify-center mb-40'>
             <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] mx-auto px-4">
-            <h2 className="text-3xl text-center font-bold mb-7 text-gray-300"><span className="bg-gradient-to-r from-blue-500 to-purple-600 
+            <h2 className="text-3xl text-center font-bold mb-6 text-gray-300"><span className="bg-gradient-to-r from-blue-500 to-purple-600 
                 bg-clip-text text-transparent">My</span> Work</h2>
-            <div className='flex-col glass rounded-xl p-7 border-white/10 border hover:-translate-y-1 
-            transition-all text-gray-300 mb-7'>
-                 <div className='flex flex-col md:flex-row w-full mb-6 md:mb-8'>
+            <div className='flex-col glass rounded-xl p-6 border-white/10 border hover:-translate-y-1 
+            transition-all text-gray-300 mb-6'>
+                 <div className='flex flex-col md:flex-row w-full mb-6 md:mb-6'>
                     <div>
-                         <p className='mb-7 md:pr-7'>{MY_WORK_TOP[0].description[0]}</p>
-                        <p className='mb-7 md:pr-7'>{MY_WORK_TOP[0].description[1]}</p>
+                         <p className='mb-6 md:pr-6'>{MY_WORK_TOP[0].description[0]}</p>
+                        <p className='mb-6 md:pr-6'>{MY_WORK_TOP[0].description[1]}</p>
                     </div>
                    
                     <div>
@@ -79,9 +79,9 @@ const Work = () => {
                     </div>
                 </div>
                 <div className='flex flex-col md:flex-row-reverse w-full sm:pr-6 md:mb-0 items-center'>
-                    <p className='mb-7'>{MY_WORK_TOP[1].description}</p>
+                    <p className='mb-6'>{MY_WORK_TOP[1].description}</p>
                     <div>
-                        <img src={MY_WORK_TOP[1].image} alt="" className='rounded-xl shadow-xl md:pr-8'/>
+                        <img src={MY_WORK_TOP[1].image} alt="" className='rounded-xl shadow-xl md:pr-6'/>
                     </div>
                 </div>
             </div>

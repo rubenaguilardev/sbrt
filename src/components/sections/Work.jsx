@@ -69,13 +69,13 @@ const Work = () => {
             <div className='flex-col glass rounded-xl p-7 border-white/10 border hover:-translate-y-1 
             transition-all text-gray-300 mb-8'>
                  <div className='flex flex-col md:flex-row w-full mb-6 md:mb-8'>
-                    <p className='mb-4 md:pr-8' style={{ whiteSpace: "pre-line" }}>{MY_WORK_TOP[0].description}</p>
+                    <p className='mb-7 md:pr-8' style={{ whiteSpace: "pre-line" }}>{MY_WORK_TOP[0].description}</p>
                     <div>
                         <img src={MY_WORK_TOP[0].image} alt="" className='rounded-xl shadow-xl' />
                     </div>
                 </div>
                 <div className='flex flex-col md:flex-row-reverse w-full sm:pr-6 md:mb-0 items-center'>
-                    <p className='mb-4'>{MY_WORK_TOP[1].description}</p>
+                    <p className='mb-7'>{MY_WORK_TOP[1].description}</p>
                     <div>
                         <img src={MY_WORK_TOP[1].image} alt="" className='rounded-xl shadow-xl md:pr-8'/>
                     </div>

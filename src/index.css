@@ -36,3 +36,27 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #3b3b3b; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #414040; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #424242; 
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #222222 #020618;
+}

@@ -35,8 +35,8 @@ const Skills = () => {
 
 
     return(
-        <section className="max-w-full md:max-w-2xl lg:max-w-[54rem] h-[540px] w-full m-auto border-white/10 border relative group 
-        rounded-xl mb-20" 
+        <section className="max-w-full md:max-w-2xl lg:max-w-[56rem] h-[540px] w-full m-auto border-white/10 border relative group 
+        rounded-xl mb-40" 
         {...swipeHandlers}>
             <div style={{backgroundImage: `url(${SKILLS[currentIndex].image})`}} 
             className="w-full h-full shadow-2xl bg-center bg-opacity-0 md:rounded-xl

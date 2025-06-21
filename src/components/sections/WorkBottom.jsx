@@ -79,7 +79,7 @@ const WorkBottom = () => {
                     ))}
                     </div>
                 </div>
-                <div className='flex items-center overflow-visible sm:p-5 rounded-xl border border-white/10 shadow-2xl'>
+                <div className='flex items-center overflow-visible p-3 sm:p-5 md:p-7 rounded-xl border border-white/10 shadow-2xl'>
                     {renderContent(MY_WORK[activeTab])}
                 </div>
             </div>

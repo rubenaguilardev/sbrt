@@ -41,8 +41,8 @@ const Skills = () => {
             <div style={{backgroundImage: `url(${SKILLS[currentIndex].image})`}} 
             className="w-full h-full shadow-2xl bg-center bg-opacity-0 md:rounded-xl
             bg-cover duration-500">
-                <div className="absolute inset-0 bg-black/50 md:rounded-xl z-10">
-                    <div className="flex items-center md:justify-between h-full w-full">
+                <div className="absolute inset-0 bg-black/45 md:rounded-xl z-10">
+                    <div className="flex items-center justify-center md:justify-between h-full w-full">
                         <button 
                             onClick={prevSlide}
                             className="hidden md:block bg-blue-500 text-gray-100 py-2 px-5 rounded font-medium transition realtive 

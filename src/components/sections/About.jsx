@@ -3,7 +3,7 @@ import { profilePicture } from "../../constants"
 const About = () => {
     return (
         <section id='about' className="flex items-center justify-center mb-40">
-            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-4">
+            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-3">
                 <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300">About <span className="bg-gradient-to-r from-blue-500 to-purple-600 
                 bg-clip-text text-transparent">Me</span></h2>
                 

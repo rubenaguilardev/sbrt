@@ -64,7 +64,7 @@ const WorkBottom = () => {
 
     return (
         <section className="flex items-center justify-center w-full mb-40">
-            <div className='max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-4 w-full'>
+            <div className='max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-3 w-full'>
                 <div className='flex justify-center min-w-0'>
                     <div className='flex flex-wrap'>
                         {MY_WORK.map((type, index) => (

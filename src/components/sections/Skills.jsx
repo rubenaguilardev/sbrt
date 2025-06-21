@@ -35,7 +35,7 @@ const Skills = () => {
 
 
     return(
-        <section className="max-w-full md:max-w-2xl lg:max-w-[56rem] h-[540px] w-full m-auto border-white/10 border relative group 
+        <section className="max-w-full md:max-w-2xl lg:max-w-[56rem] h-[540px] xl:max-w-[70rem] w-full m-auto border-white/10 border relative group 
         rounded-xl mb-40" 
         {...swipeHandlers}>
             <div style={{backgroundImage: `url(${SKILLS[currentIndex].image})`}} 
@@ -60,6 +60,16 @@ const Skills = () => {
                                 &#62;
                         </button>
                     </div>
+                </div>
+                <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-20">
+                    {SKILLS.map((skill, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentIndex(index)}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 
+                                ${index === currentIndex ? 'bg-blue-500 scale-110' : 'bg-white/30'}`}
+                        />
+                    ))}
                 </div>
                 
             </div>

@@ -1,7 +1,7 @@
 import { FaLinkedin } from 'react-icons/fa6';
 
 const Sidebars = () => {
-  const email = 'Jazmin.a.buffington@gmail.com';
+  const email = 'jazmin.a.buffington@gmail.com';
 
   return (
     <div className="max-w-7xl mx-auto px-4">

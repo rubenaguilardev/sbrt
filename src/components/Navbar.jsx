@@ -4,24 +4,24 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
     const [lastScrollY, setLastScrollY] = useState(0);  
     const [showNavbar, setShowNavbar] = useState(true);  
 
-    useEffect(() => {
+    // useEffect(() => {
         
-        const handleScroll = () => {
-            if (window.scrollY > lastScrollY) {
-                setShowNavbar(false);
-            } else {
-                setShowNavbar(true);
-            }
+    //     const handleScroll = () => {
+    //         if (window.scrollY > lastScrollY) {
+    //             setShowNavbar(false);
+    //         } else {
+    //             setShowNavbar(true);
+    //         }
 
-            setLastScrollY(window.scrollY);
-        }
+    //         setLastScrollY(window.scrollY);
+    //     }
 
-        window.addEventListener('scroll', handleScroll);
+    //     window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [lastScrollY]);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, [lastScrollY]);
 
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";

@@ -66,7 +66,7 @@ const Work = () => {
             <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] mx-auto px-4">
             <h2 className="text-3xl text-center font-bold mb-8 text-gray-300"><span className="bg-gradient-to-r from-blue-500 to-purple-600 
                 bg-clip-text text-transparent">My</span> Work</h2>
-            <div className='flex-col glass rounded-xl p-8 border-white/10 border hover:-translate-y-1 
+            <div className='flex-col glass rounded-xl p-7 border-white/10 border hover:-translate-y-1 
             transition-all text-gray-300 mb-8'>
                  <div className='flex flex-col md:flex-row w-full mb-6 md:mb-8'>
                     <p className='mb-4 md:pr-8' style={{ whiteSpace: "pre-line" }}>{MY_WORK_TOP[0].description}</p>

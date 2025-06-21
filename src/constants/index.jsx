@@ -47,8 +47,7 @@ export const MY_WORK_TOP = [
         image: wyndham,
         description : `The team at Wyndham Grand Clearwater Beach entrusted Jazmin with the task of presenting a more authentic and captivating representation of its unique guest experiences across social channels.
         
-        As a result of Jazmin's monthly efforts, 
-        there has been a notable surge in organic engagements (+209%), audience (+51%), and impressions (+178%) for Instagram from April 2023 to May 2024 in comparison to the previous year.`
+        As a result of Jazmin's monthly efforts, there has been a notable surge in organic engagements (+209%), audience (+51%), and impressions (+178%) for Instagram from April 2023 to May 2024 in comparison to the previous year.`
     },
     {
         image: margaritaville,

@@ -51,7 +51,7 @@ const Skills = () => {
                         </button>
                         <div className="flex flex-col items-center text-center">
                             <h2 className="text-3xl font-semibold text-shadow-lg text-gray-100 mb-2">{SKILLS[currentIndex].title}</h2>
-                            <p className="text-shadow-lg text-gray-100">{SKILLS[currentIndex].description}</p>
+                            <p className="text-shadow-lg text-gray-100 px-2 md:px-0">{SKILLS[currentIndex].description}</p>
                         </div>
                         <button 
                             onClick={nextSlide}

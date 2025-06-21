@@ -40,7 +40,7 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
                     </a>
 
                     <div
-                        className="w-7 h-7 relative cursor-pointer z-40 md:hidden text-2xl"
+                        className="w-7 h-7 relative cursor-pointer z-40 md:hidden text-2xl text-gray-300"
                         onClick={() => setMenuOpen((prev) => !prev)}
                     >
                         &#9776;

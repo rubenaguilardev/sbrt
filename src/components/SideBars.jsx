@@ -11,7 +11,7 @@ const Sidebars = () => {
             <a href="https://www.linkedin.com/in/jazmin-aguilar-buffington/" className="mb-4 hover:text-gray-300 transition text-2xl">
                 <FaLinkedin /></a>
             
-            <div className="w-px h-30 mt-4 bg-gradient-to-t from-blue-500 to-purple-600 
+            <div className="w-px h-30 mt-4 bg-gradient-to-t border-white/10 border
                     bg-clip-border text-transparent"></div>
             </div>
             <div className="flex flex-col items-center pointer-events-auto bg-gradient-to-b from-blue-500 to-purple-600 
@@ -19,7 +19,7 @@ const Sidebars = () => {
             <a href={`mailto:${email}`}
                 className="mb-4 text-sm tracking-widest hover:text-gray-300 transition"
                 style={{ writingMode: 'vertical-rl' }}>{email}</a>
-            <div className="w-px h-30 mt-4 bg-gradient-to-t from-blue-500 to-purple-600 
+            <div className="w-px h-30 mt-4 border-white/10 border
                     bg-clip-border text-transparent"></div>
             </div>
         </div>

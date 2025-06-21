@@ -34,7 +34,7 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
         >
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
-                    <a href="#home" className="font-mono text-lg font-bold text-gray-300">
+                    <a href="#home" className="font-mono text-md md:text-lg font-bold text-gray-300">
                         social<span className="bg-gradient-to-r from-blue-500 to-purple-600 
                 bg-clip-text text-transparent">·buffington</span>
                     </a>

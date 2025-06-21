@@ -32,10 +32,11 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
             className={`fixed top-0 w-full z-40 backdrop-blur-lg border-b border-white/10  transition-transform 
             ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
         >
-            <div className="max-w-5xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     <a href="#home" className="font-mono text-lg font-bold text-gray-300">
-                        social<span className="text-blue-500">·buffington</span>
+                        social<span className="bg-gradient-to-r from-blue-500 to-purple-600 
+                bg-clip-text text-transparent">·buffington</span>
                     </a>
 
                     <div

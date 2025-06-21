@@ -4,8 +4,8 @@ const About = () => {
     return (
         <section id='about' className="flex items-center justify-center mb-40">
             <div className="max-w-2xl md:max-w-[44rem] lg:max-w-4xl mx-auto px-4">
-                <h2 className="text-3xl text-center font-bold mb-8 bg-gradient-to-r from-blue-500 to-purple-600 
-                bg-clip-text text-transparent">About Me</h2>
+                <h2 className="text-3xl text-center font-bold mb-8 text-gray-300 ">About <span className="bg-gradient-to-r from-blue-500 to-purple-600 
+                bg-clip-text text-transparent">Me</span></h2>
                 
                 <div className="flex flex-col md:flex-row glass rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
                     

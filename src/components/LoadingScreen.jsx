@@ -29,7 +29,7 @@ const LoadingScreen = ({onComplete}) => {
     return (
         <div className="fixed flex flex-col items-center justify-center inset-0 z-50 bg-gradient-to-r from-blue-500 to-purple-600 
                 bg-clip-text text-transparent">
-            <div className="mb-4 text-3xl font-mono font-bold">
+            <div className="mb-4 text-3xl md:text-4xl font-mono font-bold">
                 {text}
             </div>
             <div className="w-[200px] h-[2px] bg-gray-800 rounded relative overflow-hidden">

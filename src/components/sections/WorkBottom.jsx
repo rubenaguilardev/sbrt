@@ -96,13 +96,14 @@ const WorkBottom = () => {
                     </div>
                 </div>
 
-                <div 
-                    key={activeTab}
-                    className={`flex items-center overflow-visible p-4 sm:p-5 md:p-7 rounded-xl border border-white/10 
-                    shadow-2xl transition-opacity duration-300 ease-in-out ${showContent ? 'opacity-100' : 'opacity-0'}`}
-                    style={{willChange: 'opacity'}}
-                >
-                    {renderContent(MY_WORK[activeTab])}
+                <div className="relative h-auto w-full">
+                    {MY_WORK.map((section, index) => (
+                        <div key={index}
+                        className={`absolute top-0 left-0 w-full transition-opacity duration-500 ease-in-out 
+                        ${activeTab === index ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                            {renderContent(section)}
+                        </div>
+                    ))}
                 </div>
             </div>
             

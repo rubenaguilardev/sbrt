@@ -42,7 +42,7 @@ const Skills = () => {
             <div className="relative w-full h-full">
                 {SKILLS.map((skill, index)=> (
                     <img key={index} src={skill.image} alt={skill.title}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out rounded-xl
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out md:rounded-xl
                     ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
                     />
                 ))}

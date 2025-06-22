@@ -22,20 +22,18 @@ const WorkBottom = () => {
             return (
                 <div className="flex snap-x snap-mandatory overflow-x-auto gap-2 scroll-smooth 
                 hide-scrollbar items-start">
-                    <img key={'one'} src={section.content[0]}
-                        className="snap-center h-half rounded-lg"/>
-                    <img key={'two'} src={section.content[1]}
+                    <img src={section.content[0]} loading='lazy'
+                    className="snap-center rounded-lg"/>
+                    <img src={section.content[1]} loading='lazy'
                     className="snap-center shrink-0 max-w-md rounded-lg object-cover"/>
-                    <div className='flex flex-col gap-[.6rem]'>
-                        <img key={'three'} src={section.content[2]}
-                        className="snap-center shrink-0 max-w-md rounded-lg object-cover"/>
-                    </div>
+                    <img src={section.content[2]} loading='lazy'
+                    className="snap-center shrink-0 max-w-md rounded-lg object-cover"/>
                     <div className='flex flex-col gap-[.5rem]'>
-                        <img key={'five'} src={section.content[3]}
+                        <img src={section.content[3]} loading='lazy'
                         className="snap-center shrink-0  max-w-md rounded-lg object-cover"/>
-                        <img key={'six'} src={section.content[4]}
+                        <img src={section.content[4]} loading='lazy'
                         className="snap-center shrink-0 max-w-md rounded-lg object-cover"/>
-                        <img key={'four'} src={section.content[5]}
+                        <img src={section.content[5]} loading='lazy'
                         className="snap-center max-w-md rounded-lg object-cover"/>
                     </div>    
                 </div>
@@ -48,7 +46,7 @@ const WorkBottom = () => {
                         <a key={index} href={blog.url}>
                             <div className="rounded-lg bg-white shadow-md p-3 text-center w-[70vw] sm:w-[35vw]">
                                 <div className="w-full overflow-hidden rounded-md mb-4">
-                                    <img src={blog.image} alt={`blog-${index}`} className='w-full h-full'/>
+                                    <img src={blog.image} loading='lazy' alt={`blog-${index}`} className='w-full h-full'/>
                                 </div>
                                 <p className="text-gray-700 text-xs">{blog.description}</p>
                             </div>
@@ -60,7 +58,7 @@ const WorkBottom = () => {
                         <a key={index + 2} href={blog.url}>
                             <div className="rounded-lg bg-white shadow-md p-3 text-center w-[70vw] sm:w-[35vw]">
                                 <div className="w-full overflow-hidden rounded-md mb-4">
-                                    <img src={blog.image} alt={`blog-${index + 2}`} className='w-full h-full'/>
+                                    <img src={blog.image} loading='lazy' alt={`blog-${index + 2}`} className='w-full h-full'/>
                                 </div>
                                 <p className="text-gray-700 text-xs w-[86%]">{blog.description}</p>
                             </div>
@@ -89,7 +87,12 @@ const WorkBottom = () => {
                     </div>
                 </div>
 
-                <div className='flex items-center overflow-visible p-4 sm:p-5 md:p-7 rounded-xl border border-white/10 shadow-2xl'>
+                <div 
+                    key={activeTab}
+                    className='flex items-center overflow-visible p-4 sm:p-5 md:p-7 rounded-xl border border-white/10 
+                    shadow-2xl transition-opacity duration-300 ease-in-out opacity-100'
+                    style={{willChange: 'opacity'}}
+                >
                     {renderContent(MY_WORK[activeTab])}
                 </div>
             </div>

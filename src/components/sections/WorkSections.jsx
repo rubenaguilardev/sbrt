@@ -37,7 +37,7 @@ const WorkSections = () => {
     
     return (
         
-            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto p-4 text-white rounded-xl">
+            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto p-3 text-white rounded-xl">
                 {workSection}
              </div>
             

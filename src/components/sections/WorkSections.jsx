@@ -1,39 +1,39 @@
 import Accordion from './Accordion'
-import {MY_WORK} from '../../constants'
+import { MY_WORK } from '../../constants'
 import { InstagramEmbed } from 'react-social-media-embed'
+import { useState } from 'react'
 
 const WorkSections = () => {
 
-    console.log(MY_WORK.content)
+    const [selectedImage, setSelectedImage] = useState(null)
 
     const workSection = MY_WORK.map((section, index) => (
         
         <Accordion
             id={index} 
             label={section.label}
-            instagram={section.id === 0 ? section.content.map((item, index) => (
+            instagram={section.id === 0 && section.content.map((item, index) => (
                 <div key={index} className="snap-center shrink-0 max-w-md rounded-lg">
                     <InstagramEmbed url={item}/> 
                 </div>
-            )): ''}
-            design={section.id === 1 ? section.content.map((item, index) => (
-                <div className=''>
-                    <img key={5} src={item} alt={`design picture ${index}`}/>
+            ))}
+
+            design={section.id === 1 && section.content.map((item, index) => (
+                <div key={index} className="cursor-pointer w-[400px] h-[400px] overflow-hidden rounded-lg flex-shrink-0" onClick={() => setSelectedImage(item)}>
+                    <img key={index} src={item} alt={`design picture ${index}`} className="w-[140%] h-full object-cover object-top transition-transform duration-300 hover:scale-105"/>
                 </div>
-                
-            )): ''}
-            blogs={section.id === 2 ? section.content.map((post, index) => (
-                
-                    <div key={45} className='flex flex-col pb-3'>
-                        <div className='w-[240px] md:w-[300px]'>
-                            <img src={post.image} className='rounded-t-lg'/>
+            ))}
+
+            blogs={section.id === 2 && section.content.map((post, index) => (
+                    <a href={post.url}>
+                        <div key={index} className='flex flex-col pb-3'>
+                            <div className='w-[240px] md:w-[280px] object-fit'>
+                                <img src={post.image} className='rounded-t-lg'/>
+                            </div>
+                            <p className='bg-beige rounded-b-lg text-gray-700 text-center p-6 xl:p-8 text-sm bg-[whitesmoke]'>{post.description}</p>
                         </div>
-                        <p className='bg-beige rounded-b-lg text-gray-700 text-center p-6 xl:p-8 text-sm bg-[whitesmoke]'>{post.description}</p>
-                    </div>
-                
-                
-            )): ''}
-            
+                    </a>
+            ))}
         />
     ))
     
@@ -41,6 +41,16 @@ const WorkSections = () => {
         
             <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-3 pt-1 text-white rounded-xl text-xl mb-40">
                 {workSection}
+                {selectedImage && (
+                <div className='fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4' 
+                onClick={() => setSelectedImage(null)}
+                >
+                    <img src={selectedImage} alt='full view' className='max-w-full max-h-full rounded-lg' 
+                    onClick={(e) => e.stopPropagation()}
+                    />
+                    <button onClick={() => setSelectedImage(null)} className='absolute top-6 right-6 text-white text-2xl'>&times;</button>
+                </div>
+                )}
              </div>
             
        
@@ -48,3 +58,5 @@ const WorkSections = () => {
 }
 
 export default WorkSections
+
+

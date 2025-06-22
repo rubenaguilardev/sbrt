@@ -12,7 +12,7 @@ const WorkSections = () => {
             id={index} 
             label={section.label}
             instagram={section.id === 0 ? section.content.map((item, index) => (
-                <div key={index} className="snap-center shrink-0 max-w-md rounded-lg">
+                <div key={index} className="snap-center shrink-0 max-w-md rounded-lg pb-2">
                     <InstagramEmbed url={item}/> 
                 </div>
             )): ''}
@@ -37,7 +37,7 @@ const WorkSections = () => {
     
     return (
         
-            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto p-3 text-white rounded-xl">
+            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto p-3 text-white rounded-xl text-xl">
                 {workSection}
              </div>
             

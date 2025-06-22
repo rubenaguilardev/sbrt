@@ -9,12 +9,12 @@ const WorkBottom = () => {
     const [showContent, setShowContent] = useState(true)
 
     const handleTabChange = (index) => {
-    setShowContent(false)
-    setTimeout(() => {
-        setActiveTab(index)
-        setShowContent(true)
-    }, 200)
-}
+        setShowContent(false)
+        setTimeout(() => {
+            setActiveTab(index)
+            setShowContent(true)
+        }, 200) 
+    }
 
     const renderContent = section => {
         if (section.id === 0) {

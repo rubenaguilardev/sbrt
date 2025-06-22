@@ -12,21 +12,23 @@ const WorkSections = () => {
             id={index} 
             label={section.label}
             instagram={section.id === 0 ? section.content.map((item, index) => (
-                <div key={index} className="snap-center shrink-0 max-w-md rounded-lg pb-2">
+                <div key={index} className="snap-center shrink-0 max-w-md rounded-lg">
                     <InstagramEmbed url={item}/> 
                 </div>
             )): ''}
             design={section.id === 1 ? section.content.map((item, index) => (
                 <div className=''>
-                    <img key={index} src={item} alt={`design picture ${index}`}/>
+                    <img key={5} src={item} alt={`design picture ${index}`}/>
                 </div>
                 
             )): ''}
             blogs={section.id === 2 ? section.content.map((post, index) => (
                 
-                    <div key={index} className='p-2 flex flex-col'>
-                        <img src={post.image} className='rounded-t-lg'/>
-                        <p className='bg-white rounded-b-lg'>{post.description}</p>
+                    <div key={45} className='flex flex-col pb-3'>
+                        <div className='w-[240px] md:w-[300px]'>
+                            <img src={post.image} className='rounded-t-lg'/>
+                        </div>
+                        <p className='bg-beige rounded-b-lg text-gray-700 text-center p-6 xl:p-8 text-sm bg-[whitesmoke]'>{post.description}</p>
                     </div>
                 
                 

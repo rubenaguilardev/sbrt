@@ -6,15 +6,6 @@ import { MY_WORK } from '../../constants/index'
 const WorkBottom = () => {
 
     const [activeTab, setActiveTab] = useState(0)
-    const [showContent, setShowContent] = useState(true)
-
-    const handleTabChange = (index) => {
-        setShowContent(false)
-        setTimeout(() => {
-            setActiveTab(index)
-            setShowContent(true)
-        }, 200) 
-    }
 
     const renderContent = section => {
         if (section.id === 0) {
@@ -90,20 +81,19 @@ const WorkBottom = () => {
                             className={`py-3 px-6 font-medium text-sm duration-300 cursor-pointer rounded-t-lg
                             ${activeTab === index ? `text-blue-500 border border-blue-500/50 border-b-0` 
                             : "text-gray-500 hover:text-gray-300 transition-all duration-200 overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10"}`}
-                            onClick={() => handleTabChange(index)}>
+                            onClick={() => setActiveTab(index)}>
                                 {type.label}
                         </button>))}
                     </div>
                 </div>
 
-                <div className="relative h-auto w-full">
-                    {MY_WORK.map((section, index) => (
-                        <div key={index}
-                        className={`absolute top-0 left-0 w-full transition-opacity duration-500 ease-in-out 
-                        ${activeTab === index ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-                            {renderContent(section)}
-                        </div>
-                    ))}
+                <div 
+                    key={activeTab}
+                    className='flex items-center overflow-visible p-4 sm:p-5 md:p-7 rounded-xl border border-white/10 
+                    shadow-2xl transition-opacity duration-300 ease-in-out opacity-100'
+                    style={{willChange: 'opacity'}}
+                >
+                    {renderContent(MY_WORK[activeTab])}
                 </div>
             </div>
             

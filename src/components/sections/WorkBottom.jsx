@@ -46,16 +46,43 @@ const WorkBottom = () => {
             )
         } else {
             return (
-                <div className="flex snap-x snap-mandatory overflow-x-auto gap-2 scroll-smooth hide-scrollbar">
-                    {section.content.map((blog, index) => (
-                    <a href={blog.url}><div key={index} 
-                    className="snap-center shrink-0 flex flex-col max-w-md rounded-lg bg-white 
-                    shadow-md p-4 text-center">
-                        <img src={blog.image} className="w-full h-full object-cover rounded-md mb-4"
-                        alt={`blog-${index}`}/>
-                        <p className="text-gray-700 text-sm">{blog.description}</p>
-                    </div></a> ))}
+                <div className="flex overflow-x-auto gap-6 scroll-smooth snap-x snap-mandatory px-2 hide-scrollbar">
+  
+                    <div className="flex flex-col gap-4 shrink-0 w-[75vw] snap-center">
+                    {section.content.slice(0, 2).map((blog, index) => (
+                        <a key={index} href={blog.url}>
+                            <div className="rounded-lg bg-white shadow-md p-4 text-center">
+                                <div className="w-full overflow-hidden rounded-md mb-4">
+                                    <img
+                                    src={blog.image}
+                                    alt={`blog-${index}`}
+                                    className="w-full h-full"
+                                    />
+                                </div>
+                                <p className="text-gray-700 text-sm">{blog.description}</p>
+                            </div>
+                        </a>
+                        ))}
+                    </div>
+
+                    <div className="flex flex-col gap-4 shrink-0 w-[75vw] snap-center">
+                    {section.content.slice(2, 4).map((blog, index) => (
+                        <a key={index + 2} href={blog.url}>
+                            <div className="rounded-lg bg-white shadow-md p-4 text-center">
+                            <div className="w-full overflow-hidden rounded-md mb-4">
+                                <img
+                                src={blog.image}
+                                alt={`blog-${index + 2}`}
+                                className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <p className="text-gray-700 text-sm max-w-[90%]">{blog.description}</p>
+                            </div>
+                        </a>
+                        ))}
+                    </div>
                 </div>
+
             )
         }
     }
@@ -79,7 +106,7 @@ const WorkBottom = () => {
                     ))}
                     </div>
                 </div>
-                <div className='flex items-center overflow-visible p-3 sm:p-5 md:p-7 rounded-xl border border-white/10 shadow-2xl'>
+                <div className='flex items-center overflow-visible px-3 py-5 sm:p-5 md:p-7 rounded-xl border border-white/10 shadow-2xl'>
                     {renderContent(MY_WORK[activeTab])}
                 </div>
             </div>

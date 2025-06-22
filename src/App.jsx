@@ -7,7 +7,7 @@ import Home from './components/sections/Home'
 import About from './components/sections/About'
 import Skills from './components/sections/Skills'
 import Work from './components/sections/Work'
-import WorkBottom from './components/sections/WorkBottom'
+import WorkSections from './components/sections/WorkSections'
 
 const App = () => {
 
@@ -37,7 +37,7 @@ const App = () => {
       <About />
       <Skills />
       <Work/>
-      <WorkBottom/>
+      <WorkSections/>
     </div>
     
   </div>

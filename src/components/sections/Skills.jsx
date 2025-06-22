@@ -52,7 +52,7 @@ const Skills = () => {
                     <div className="flex items-center justify-center md:justify-between h-full w-full">
                         <button 
                             onClick={prevSlide}
-                            className="hidden md:block bg-blue-500/50 text-gray-100 border border-blue-500 py-2 px-5 rounded font-medium transition realtive 
+                            className="hidden md:block bg-blue-500/80 text-gray-100 border border-blue-500 py-2 px-5 rounded font-medium transition realtive 
                             hover:bg-blue-500/70 overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] cursor-pointer ml-10">
                                 &#60;
                         </button>
@@ -62,7 +62,7 @@ const Skills = () => {
                         </div>
                         <button 
                             onClick={nextSlide}
-                            className="hidden md:block bg-blue-500 text-gray-100 py-2 px-5 rounded font-medium transition realtive 
+                            className="hidden md:block bg-blue-500/80 text-gray-100 py-2 px-5 rounded font-medium transition realtive 
                             overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] mr-10 cursor-pointer">
                                 &#62;
                         </button>
@@ -74,7 +74,7 @@ const Skills = () => {
                             key={index}
                             onClick={() => setCurrentIndex(index)}
                             className={`w-3 h-3 rounded-full transition-all duration-300 
-                                ${index === currentIndex ? 'bg-blue-500/60 border-blue-500 scale-110' : 'bg-white/30'}`}
+                                ${index === currentIndex ? 'bg-blue-500 scale-110' : 'bg-white/30'}`}
                         />
                     ))}
                 </div>

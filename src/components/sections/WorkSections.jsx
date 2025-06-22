@@ -10,6 +10,8 @@ const WorkSections = () => {
     const workSection = MY_WORK.map((section, index) => (
         
         <Accordion
+            color={section.color}
+            icon={section.icon}
             id={index} 
             label={section.label}
             instagram={section.id === 0 && section.content.map((item, index) => (
@@ -19,7 +21,7 @@ const WorkSections = () => {
             ))}
 
             design={section.id === 1 && section.content.map((item, index) => (
-                <div key={index} className="cursor-pointer w-[300px] h-[350px] overflow-hidden rounded-lg flex-shrink-0" onClick={() => setSelectedImage(item)}>
+                <div key={index} className=" snap-center cursor-pointer w-[300px] h-[350px] overflow-hidden rounded-lg flex-shrink-0" onClick={() => setSelectedImage(item)}>
                     <img key={index} src={item} alt={`design picture ${index}`} className="w-[140%] h-full object-cover object-top transition-transform duration-300 hover:scale-105"/>
                 </div>
             ))}

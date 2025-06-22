@@ -16,6 +16,7 @@ import blog2 from '../assets/blogs/2.png'
 import blog3 from '../assets/blogs/3.png'
 import blog4 from '../assets/blogs/4.png'
 
+
 export const profilePicture = profilePic
 
 export const SKILLS = [ 
@@ -62,6 +63,8 @@ export const MY_WORK = [
     {
         label: 'Instagram',
         id: 0,
+        icon: <i className="fab fa-instagram"/>,
+        color: `bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600`,
         content: 
             [
                 'https://www.instagram.com/reel/C9ieGxNJ0ih/?utm_source=ig_embed&ig_rid=bf0eaf37-43c8-4e0f-9baf-f2748daac228',
@@ -75,6 +78,8 @@ export const MY_WORK = [
     { 
         label: 'Design',
         id: 1,
+        icon: <i className="fa fa-palette"/>,
+        color: `bg-gradient-to-br from-pink-500 via-rose-400 to-red-300`,
         content: [
             design1, design2, design3, design4, design5, design6
         ]
@@ -83,6 +88,8 @@ export const MY_WORK = [
     { 
         label: "Blogs",
         id: 2,
+        icon: <i className="fa fa-blog"/>,
+        color: `bg-gradient-to-br from-gray-400 to-rose-400`,
         content: [
             {
                 image: blog1,

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-const Accordion = ({id, label, instagram, design, blogs}) => {
+const Accordion = ({id, label, instagram, design, blogs, icon, color}) => {
 
     console.log(label)
     
@@ -12,16 +12,19 @@ const Accordion = ({id, label, instagram, design, blogs}) => {
     return (
         <div key={id} className={`border mb-1 rounded-xl hover:-translate-y-1 transition-all cursor-pointer border-white/10 ${accordionOpen ? 'bg-blue-500/5' : 'border-white/10'}`}>
             <button onClick={() => setAccordionOpen(!accordionOpen)} className={"flex justify-between items-center w-full p-3 m-3 cursor-pointer"}>
+                <div className={`text-3xl lg:text-4xl self-center bg-clip-text text-transparent ${color}`}>
+                    {icon}
+                </div>
                 <span className={`${accordionOpen ? 'text-blue-500' : 'text-gray-300'}`}>{label}</span>
                 <svg
                     className="fill-blue-500 shrink-0 mr-6"
-                    width="24"
-                    height="24"
+                    width="22"
+                    height="22"
                     xmlns="http://www.w3.org/2000/svg"
                     >
                     <rect
-                        y="11"
-                        width="24"
+                        y="10"
+                        width="22"
                         height="2"
                         rx="1"
                         className={`transform origin-center transition duration-200 ease-out ${
@@ -29,8 +32,8 @@ const Accordion = ({id, label, instagram, design, blogs}) => {
                     }`}
                     />
                     <rect
-                        y="11"
-                        width="24"
+                        y="10"
+                        width="22"
                         height="2"
                         rx="1"
                         className={`transform origin-center rotate-90 transition duration-200 ease-out ${

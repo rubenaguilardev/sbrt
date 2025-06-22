@@ -13,7 +13,7 @@ const Home = () => {
                     digital marketing, photography, design, and epic event planning.
                 </p>
                 <div className="flex justify-center space-x-4">
-                    <a href="#gallery" className="bg-blue-500 text-gray-100 py-3 px-6 rounded font-medium transition realtive 
+                    <a href="#gallery" className="bg-blue-500/80 text-gray-100 py-3 px-6 rounded font-medium transition realtive 
                     overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]">
                         View Gallery
                     </a>

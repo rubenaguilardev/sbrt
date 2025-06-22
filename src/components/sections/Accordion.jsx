@@ -8,11 +8,11 @@ const Accordion = ({id, label, instagram, design, blogs}) => {
    console.log(blogs)
     
     return (
-        <div key={id} className="border border-white/10 mb-2 rounded-lg p-5">
-            <button onClick={() => setAccordionOpen(!accordionOpen)} className="flex justify-between items-center w-full text-gray-300">
+        <div key={id} className="border border-white/10 mb-1 rounded-lg">
+            <button onClick={() => setAccordionOpen(!accordionOpen)} className="flex justify-between items-center w-full text-gray-300 p-3 m-3">
                 <span>{label}</span>
                 <svg
-                    className="fill-blue-500 shrink-0 ml-8"
+                    className="fill-blue-500 shrink-0 mr-6"
                     width="16"
                     height="16"
                     xmlns="http://www.w3.org/2000/svg"

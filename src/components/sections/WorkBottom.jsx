@@ -23,7 +23,7 @@ const WorkBottom = () => {
                 <div className="flex snap-x snap-mandatory overflow-x-auto gap-2 scroll-smooth 
                 hide-scrollbar items-start">
                     <img key={'one'} src={section.content[0]}
-                        className="snap-center shrink-0 max-w-md rounded-lg object-cover"/>
+                        className="snap-center h-half rounded-lg"/>
                     <img key={'two'} src={section.content[1]}
                     className="snap-center shrink-0 max-w-md rounded-lg object-cover"/>
                     <div className='flex flex-col gap-[.6rem]'>

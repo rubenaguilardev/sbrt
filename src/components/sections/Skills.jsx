@@ -37,11 +37,18 @@ const Skills = () => {
     return(
         <section className="max-w-full md:max-w-2xl lg:max-w-[56rem] h-[540px] xl:max-w-[70rem] w-full m-auto 
         border-white/10 border relative group rounded-xl mb-40 shadow-2xl" 
-        {...swipeHandlers}>
-            <div style={{backgroundImage: `url(${SKILLS[currentIndex].image})`}} 
-            className="w-full h-full bg-center bg-opacity-0 md:rounded-xl
-            bg-cover duration-500">
-                <div className="absolute inset-0 bg-black/45 md:rounded-xl z-10">
+            {...swipeHandlers}
+        >
+            <div className="relative w-full h-full">
+                {SKILLS.map((skill, index)=> (
+                    <img key={index} src={skill.image} alt={skill.title}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out rounded-xl
+                    ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                    />
+                ))}
+                
+                <div className="absolute inset-0 bg-black/45 md:rounded-xl z-20">
+
                     <div className="flex items-center justify-center md:justify-between h-full w-full">
                         <button 
                             onClick={prevSlide}
@@ -62,8 +69,8 @@ const Skills = () => {
                     </div>
                 </div>
                 <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-20">
-                    {SKILLS.map((skill, index) => (
-                        <button
+                    {SKILLS.map((_, index) => (
+                        <button 
                             key={index}
                             onClick={() => setCurrentIndex(index)}
                             className={`w-3 h-3 rounded-full transition-all duration-300 

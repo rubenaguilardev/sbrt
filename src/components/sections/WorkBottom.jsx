@@ -6,6 +6,15 @@ import { MY_WORK } from '../../constants/index'
 const WorkBottom = () => {
 
     const [activeTab, setActiveTab] = useState(0)
+    const [showContent, setShowContent] = useState(true)
+
+    const handleTabChange = (index) => {
+    setShowContent(false)
+    setTimeout(() => {
+        setActiveTab(index)
+        setShowContent(true)
+    }, 200)
+}
 
     const renderContent = section => {
         if (section.id === 0) {
@@ -81,7 +90,7 @@ const WorkBottom = () => {
                             className={`py-3 px-6 font-medium text-sm duration-300 cursor-pointer rounded-t-lg
                             ${activeTab === index ? `text-blue-500 border border-blue-500/50 border-b-0` 
                             : "text-gray-500 hover:text-gray-300 transition-all duration-200 overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10"}`}
-                            onClick={() => setActiveTab(index)}>
+                            onClick={() => handleTabChange(index)}>
                                 {type.label}
                         </button>))}
                     </div>
@@ -89,8 +98,8 @@ const WorkBottom = () => {
 
                 <div 
                     key={activeTab}
-                    className='flex items-center overflow-visible p-4 sm:p-5 md:p-7 rounded-xl border border-white/10 
-                    shadow-2xl transition-opacity duration-300 ease-in-out opacity-100'
+                    className={`flex items-center overflow-visible p-4 sm:p-5 md:p-7 rounded-xl border border-white/10 
+                    shadow-2xl transition-opacity duration-300 ease-in-out ${showContent ? 'opacity-100' : 'opacity-0'}`}
                     style={{willChange: 'opacity'}}
                 >
                     {renderContent(MY_WORK[activeTab])}

@@ -48,7 +48,7 @@ const WorkBottom = () => {
             return (
                 <div className="flex overflow-x-auto gap-6 scroll-smooth snap-x snap-mandatory px-2 hide-scrollbar">
   
-                    <div className="flex flex-col gap-4 shrink-0 w-[75vw] snap-center">
+                    <div className="flex flex-col gap-3 shrink-0 w-[75vw] snap-center">
                     {section.content.slice(0, 2).map((blog, index) => (
                         <a key={index} href={blog.url}>
                             <div className="rounded-lg bg-white shadow-md p-4 text-center">
@@ -65,7 +65,7 @@ const WorkBottom = () => {
                         ))}
                     </div>
 
-                    <div className="flex flex-col gap-4 shrink-0 w-[75vw] snap-center">
+                    <div className="flex flex-col gap-3 shrink-0 w-[75vw] snap-center">
                     {section.content.slice(2, 4).map((blog, index) => (
                         <a key={index + 2} href={blog.url}>
                             <div className="rounded-lg bg-white shadow-md p-4 text-center">
@@ -76,7 +76,7 @@ const WorkBottom = () => {
                                 className="w-full h-full object-cover"
                                 />
                             </div>
-                            <p className="text-gray-700 text-sm max-w-[90%]">{blog.description}</p>
+                            <p className="text-gray-700 text-sm">{blog.description}</p>
                             </div>
                         </a>
                         ))}

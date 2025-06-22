@@ -8,9 +8,9 @@ const Accordion = ({id, label, instagram, design, blogs}) => {
    console.log(blogs)
     
     return (
-        <div key={id} className="border border-white/10 mb-1 rounded-xl">
-            <button onClick={() => setAccordionOpen(!accordionOpen)} className="flex justify-between items-center w-full text-gray-300 p-3 m-3">
-                <span>{label}</span>
+        <div key={id} className={`border mb-1 rounded-xl hover:-translate-y-1 transition-all cursor-pointer ${accordionOpen ? 'border-blue-500/50 bg-blue-500/5' : 'border-white/10'}`}>
+            <button onClick={() => setAccordionOpen(!accordionOpen)} className={"flex justify-between items-center w-full p-3 m-3 cursor-pointer"}>
+                <span className={`${accordionOpen ? 'text-blue-500' : 'text-gray-300'}`}>{label}</span>
                 <svg
                     className="fill-blue-500 shrink-0 mr-6"
                     width="24"
@@ -37,7 +37,7 @@ const Accordion = ({id, label, instagram, design, blogs}) => {
                     />
                 </svg>
             </button>
-            <div className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 text-sm ${
+            <div className={`grid overflow-hidden transition-all duration-300 ease-in-out text-sm text-gray-700 ${
                 accordionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
             }`}>
                 <div className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth hide-scrollbar min-w-0">

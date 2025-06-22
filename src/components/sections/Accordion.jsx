@@ -8,8 +8,8 @@ const Accordion = ({id, label, instagram, design, blogs}) => {
    console.log(blogs)
     
     return (
-        <div key={id} className="py-2 border border-white/10 mb-2 rounded-lg p-3">
-            <button onClick={() => setAccordionOpen(!accordionOpen)} className="flex justify-between w-full">
+        <div key={id} className="border border-white/10 mb-2 rounded-lg p-5">
+            <button onClick={() => setAccordionOpen(!accordionOpen)} className="flex justify-between items-center w-full text-gray-300">
                 <span>{label}</span>
                 <svg
                     className="fill-blue-500 shrink-0 ml-8"

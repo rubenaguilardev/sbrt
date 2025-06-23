@@ -15,7 +15,7 @@ const Accordion = ({id, label, instagram, design, blogs, icon, color}) => {
                 <div className={`text-3xl lg:text-4xl self-center bg-clip-text text-transparent ${color}`}>
                     {icon}
                 </div>
-                <span className={`${accordionOpen ? 'text-blue-500' : 'text-gray-300'}`}>{label}</span>
+                <span className={`font-semibold ${accordionOpen ? 'text-blue-500' : 'text-gray-300'}`}>{label}</span>
                 <svg
                     className="fill-blue-500 shrink-0 mr-6"
                     width="22"

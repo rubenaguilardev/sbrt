@@ -8,6 +8,7 @@ import About from './components/sections/About'
 import Skills from './components/sections/Skills'
 import Work from './components/sections/Work'
 import WorkSections from './components/sections/WorkSections'
+import Testimonials from './components/sections/Testimonials'
 
 const App = () => {
 
@@ -38,6 +39,7 @@ const App = () => {
       <Skills />
       <Work/>
       <WorkSections/>
+      <Testimonials/>
     </div>
     
   </div>

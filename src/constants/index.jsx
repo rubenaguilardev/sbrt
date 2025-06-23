@@ -15,6 +15,9 @@ import blog1 from '../assets/blogs/1.png'
 import blog2 from '../assets/blogs/2.png'
 import blog3 from '../assets/blogs/3.png'
 import blog4 from '../assets/blogs/4.png'
+import testimonial1 from '../assets/testimonials/1.png'
+import testimonial2 from '../assets/testimonials/2.png'
+import testimonial3 from '../assets/testimonials/3.png'
 
 
 export const profilePicture = profilePic
@@ -114,4 +117,45 @@ export const MY_WORK = [
             
         ]
     }
+]
+
+export const TESTIMONIAL_CONTENT = [
+    {
+        label: '<',
+        background: testimonial1,
+        author: 'Greg Lutchko',
+        company: 'Margaritaville Resort Palm Springs',
+        testimonial: `
+            "Jazmin is a strategic and creative social media professional. She stays updated on the trends 
+            across all platforms to create thoughtful and clever campaigns that are on-brand, resonate with our audience, 
+            generate positive engagement and deliver a solid ROI. Her ability to listen and ask key questions make her a 
+            great collaborator and solid team player."
+        `
+    },
+    {
+        label: 'Testimonials',
+        background: testimonial2,
+        author: 'Taylor Eckard',
+        company: 'Wyndham Grand Clearwater Beach',
+        testimonial: `
+            "Working with Jazmin has been an absolute pleasure. Her professionalism and dedication are truly
+            exceptional. Jazmin consistently goes above and beyond, taking the time to understand our unique
+            needs and tailoring her approach to meet them. Her expertise in social media has been transformative for
+            our engagement and outreach, helping us connect with our audience in innovative ways. I wholeheartedly recommend 
+            Jazmin for anyone seeking a knowledgeable and committed social media expert."
+        `
+    },
+    {
+        label: '>',
+        background: testimonial3,
+        author: 'Annie Humphrey',
+        company: 'Save the Storks',
+        testimonial: `
+            "I had the privilege of working with Jazmin for over a decade. I knew Jazmin’s tenacity, creativity, and hunger for 
+            learning will always make her one of the best assets on any team she joins. It was rewarding to see her grow from a Part-Time Consultant 
+            to a Guest Service Manager, to a Community Manager, and then step into a Social Media Manager Role. 
+            When she stepped into the leadership role, she embraced that career milestone by leading with empathy and confidence. Jazmin is a rare 
+            find, a total package that has the drive, the grit, the creativity, the vision, the passion, and loyalty!"
+        `
+    },
 ]

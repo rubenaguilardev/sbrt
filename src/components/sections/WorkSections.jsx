@@ -28,7 +28,7 @@ const WorkSections = () => {
 
             blogs={section.id === 2 && section.content.map((post, index) => (
                     <a href={post.url}>
-                        <div key={index} className='flex flex-col pb-3 transition-transform duration-300 hover:scale-102 mt-1'>
+                        <div key={index} className='flex flex-col pb-3 snap-center transition-transform duration-300 hover:scale-102 mt-1'>
                             <div className='w-[220px] md:w-[260px] object-fit'>
                                 <img src={post.image} className='rounded-t-lg'/>
                             </div>

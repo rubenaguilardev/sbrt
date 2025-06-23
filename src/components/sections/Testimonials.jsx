@@ -6,8 +6,8 @@ const Testimonials = () => {
     const [activeTab, setActiveTab] = useState(0)
 
     const renderContent = (content => (
-        <div className="text-gray-300 p-4 rounded-xl w-[310px] bg-cover"
-        style={{backgroundImage:`url(${content.background})`}}>
+        <div className="text-gray-300 p-4 rounded-xl w-[320px] h-[490px] bg-black/60"
+        >
             <h2>{content.author}</h2>
             <h3>{content.company}</h3>
             <p>{content.testimonial}</p>
@@ -40,7 +40,8 @@ const Testimonials = () => {
                     </div>
                 ))}
             </div> 
-            <div className="border border-white/10 p-3 rounded-xl text-gray-30">
+            <div className="border border-white/10 p-3 rounded-xl text-gray-30"
+            style={{backgroundImage:`url(${TESTIMONIAL_CONTENT[activeTab].background})`}}>
                 {renderContent(TESTIMONIAL_CONTENT[activeTab])}
             </div>
             </div> 

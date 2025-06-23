@@ -12,7 +12,7 @@ const WorkSections = () => {
         <Accordion
             color={section.color}
             icon={section.icon}
-            id={index} 
+            id={section.id} 
             label={section.label}
             instagram={section.id === 0 && section.content.map((item, index) => (
                 <div key={index} className="snap-center shrink-0 max-w-md rounded-lg transition-transform duration-300 hover:scale-102 mt-2">
@@ -41,7 +41,7 @@ const WorkSections = () => {
     
     return (
         
-            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-3 pt-1 text-white rounded-xl text-xl mb-40">
+            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-4 pt-1 text-gray-300 text-xl mb-40">
                 {workSection}
                 {selectedImage && (
                 <div className='fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4' 

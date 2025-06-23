@@ -10,9 +10,9 @@ const Accordion = ({id, label, instagram, design, blogs, icon, color}) => {
    console.log(blogs)
     
     return (
-        <div key={id} className={`border mb-1 rounded-xl hover:-translate-y-1 transition-all cursor-pointer border-white/10 ${accordionOpen ? 'bg-blue-500/5' : 'border-white/10'}`}>
-            <button onClick={() => setAccordionOpen(!accordionOpen)} className={"flex justify-between items-center w-full p-3 m-3 cursor-pointer"}>
-                <div className={`text-3xl lg:text-4xl self-center bg-clip-text text-transparent ${color}`}>
+        <div key={id} className={`border-b border-white/10 hover:-translate-y-1 transition-all cursor-pointer`}>
+            <button onClick={() => setAccordionOpen(!accordionOpen)} className={"flex justify-between items-center w-full p-4 cursor-pointer"}>
+                <div className={`text-2xl lg:text-4xl self-center bg-clip-text text-transparent ${color}`}>
                     {icon}
                 </div>
                 <span className={`font-semibold ${accordionOpen ? 'text-blue-500' : 'text-gray-300'}`}>{label}</span>

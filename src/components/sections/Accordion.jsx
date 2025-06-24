@@ -10,14 +10,14 @@ const Accordion = ({id, label, instagram, design, blogs, icon, color}) => {
    console.log(blogs)
     
     return (
-        <div key={id} className={`border-b border-white/10 hover:-translate-y-1 transition-all cursor-pointer p-4`}>
+        <div key={id} className={`border-b border-white/10 hover:-translate-y-1 transition-all cursor-pointer py-4 px-1`}>
             <button onClick={() => setAccordionOpen(!accordionOpen)} className={"flex justify-between items-center w-full cursor-pointer"}>
-                <div className={`text-2xl lg:text-4xl self-center bg-clip-text text-transparent ml-4 ${color}`}>
+                <div className={`text-2xl lg:text-4xl self-center bg-clip-text text-transparent ml-3 ${color}`}>
                     {icon}
                 </div>
                 <span className={`font-semibold ${accordionOpen ? 'text-blue-500' : 'text-gray-300'}`}>{label}</span>
                 <svg
-                    className="fill-blue-500 shrink-0 mr-4"
+                    className="fill-blue-500 shrink-0 mr-3"
                     width="22"
                     height="22"
                     xmlns="http://www.w3.org/2000/svg"

@@ -22,6 +22,7 @@ import blog4 from '../assets/blogs/4.png'
 import testimonial2 from '../assets/testimonials/2.jpg'
 import testimonial1 from '../assets/testimonials/1.jpg'
 import testimonial3 from '../assets/testimonials/3.jpg'
+import family from '../assets/family.jpg'
 
 
 export const profilePicture = profilePic
@@ -165,3 +166,5 @@ export const TESTIMONIAL_CONTENT = [
         `
     },
 ]
+
+const familyPic = family

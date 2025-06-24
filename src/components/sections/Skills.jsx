@@ -37,7 +37,7 @@ const Skills = () => {
 
     return(
         <section className="max-w-full md:w-[42.5rem] lg:w-[56.4rem] h-[540px] xl:w-[70.5rem] w-full m-auto 
-        relative group rounded-xl mb-20 shadow-2xl" 
+        relative group rounded-xl mb-30 shadow-2xl" 
             {...swipeHandlers}
         >
             
@@ -50,7 +50,6 @@ const Skills = () => {
                 ))}
                 
                 <div className="absolute inset-0 bg-black/50 md:rounded-xl z-20">
-                    
                     <div className="flex justify-center items-center md:justify-between h-full w-full">
                         <button 
                             onClick={prevSlide}

@@ -9,6 +9,7 @@ import Skills from './components/sections/Skills'
 import Work from './components/sections/Work'
 import WorkSections from './components/sections/WorkSections'
 import Testimonials from './components/sections/Testimonials'
+import Contact from './components/sections/Contact'
 
 const App = () => {
 
@@ -40,6 +41,7 @@ const App = () => {
       <Work/>
       <WorkSections/>
       <Testimonials/>
+      <Contact/>
     </div>
     
   </div>

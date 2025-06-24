@@ -8,7 +8,7 @@ const Sidebars = () => {
         <div className="fixed bottom-0 left-0 right-0 z-51 hidden md:flex pointer-events-none">
         <div className="w-full max-w-7xl mx-auto px-4 flex justify-between">
             <div className="flex flex-col items-center justify-end text-blue-500 pointer-events-auto">
-            <a href="https://www.linkedin.com/in/jazmin-aguilar-buffington/" className="mb-4 hover:text-gray-300 transition text-2xl hover:-translate-y-1 transition-all">
+            <a href="https://www.linkedin.com/in/jazmin-aguilar-buffington/" className="mb-4 hover:text-gray-300 text-2xl hover:-translate-y-1 transition-all">
                 <FaLinkedin /></a>
             
             <div className="w-px h-30 mt-4 bg-gradient-to-t border-white/10 border

@@ -42,7 +42,7 @@ const WorkSections = () => {
     
     return (
             <RevealOnScroll>
-            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto  text-gray-300 text-xl mb-20 px-3">
+            <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto  text-gray-300 text-xl mb-30 px-3">
                 {workSection}
                 {selectedImage && (
                 <div className='fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4' 

@@ -2,6 +2,7 @@ import { TESTIMONIAL_CONTENT } from "../../constants"
 import { SKILLS } from "../../constants"
 import { useState, useEffect } from 'react'
 import { useSwipeable } from "react-swipeable"
+import RevealOnScroll from "../RevealOnScroll"
 
 const Testimonials = () => {
 
@@ -32,6 +33,7 @@ const Testimonials = () => {
         relative group rounded-xl mb-40 shadow-2xl" 
             {...swipeHandlers}
         >
+            
             <div className="relative w-full h-full">
                 {TESTIMONIAL_CONTENT.map((testimonial, index)=> (
                     <img key={index} src={testimonial.background} alt={testimonial.author}
@@ -49,11 +51,13 @@ const Testimonials = () => {
                             hover:bg-blue-500/70 overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] cursor-pointer ml-7">
                                 &#60;
                         </button>
+                        <RevealOnScroll>
                         <div className="flex flex-col items-center text-center text-gray-100 text-shadow-2xl text-sm md:text-md lg:text-lg">
                             <p className="text-shadow-lg px-5 md:px-12 lg:px-14 xl:px-16 mb-4">{TESTIMONIAL_CONTENT[currentIndex].testimonial}</p>
                             <h2 className="text-2xl font-semibold mb-2 text-blue-500">{`-${TESTIMONIAL_CONTENT[currentIndex].author}`}</h2>
                             <h3 className="txt-xl font-semibold">{TESTIMONIAL_CONTENT[currentIndex].company}</h3>
                         </div>
+                        </RevealOnScroll>
                         <button 
                             onClick={nextSlide}
                             className="hidden md:flex justify-center bg-blue-500/80 text-gray-100 py-2 px-6 rounded font-medium transition realtive text-xl
@@ -74,7 +78,6 @@ const Testimonials = () => {
                 </div>
                 
             </div>
-            
         </section>
     )
 }

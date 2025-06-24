@@ -1,6 +1,7 @@
 import { SKILLS } from "../../constants"
 import { useState, useEffect } from 'react'
 import { useSwipeable } from "react-swipeable"
+import RevealOnScroll from "../RevealOnScroll"
 
 const Skills = () => {
 
@@ -39,6 +40,7 @@ const Skills = () => {
         relative group rounded-xl mb-40 shadow-2xl" 
             {...swipeHandlers}
         >
+            
             <div className="relative w-full h-full">
                 {SKILLS.map((skill, index)=> (
                     <img key={index} src={skill.image} alt={skill.title}
@@ -48,7 +50,7 @@ const Skills = () => {
                 ))}
                 
                 <div className="absolute inset-0 bg-black/50 md:rounded-xl z-20">
-
+                    
                     <div className="flex justify-center items-center md:justify-between h-full w-full">
                         <button 
                             onClick={prevSlide}
@@ -56,10 +58,12 @@ const Skills = () => {
                             hover:bg-blue-500/70 overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] cursor-pointer ml-7">
                                 &#60;
                         </button>
-                        <div className="flex flex-col items-center text-center">
-                            <h2 className="text-3xl font-semibold text-shadow-lg text-gray-100 mb-2">{SKILLS[currentIndex].title}</h2>
-                            <p className="text-shadow-lg text-gray-100 px-10 md:px-0">{SKILLS[currentIndex].description}</p>
-                        </div>
+                        <RevealOnScroll>
+                            <div className="flex flex-col items-center text-center">
+                                <h2 className="text-3xl font-semibold text-shadow-lg text-gray-100 mb-2">{SKILLS[currentIndex].title}</h2>
+                                <p className="text-shadow-lg text-gray-100 px-10 md:px-0">{SKILLS[currentIndex].description}</p>
+                            </div>
+                        </RevealOnScroll>
                         <button 
                             onClick={nextSlide}
                             className="hidden md:flex bg-blue-500/80 text-gray-100 py-2 px-5 rounded text-xl transition realtive 
@@ -67,7 +71,9 @@ const Skills = () => {
                                 &#62;
                         </button>
                     </div>
+                    
                 </div>
+                
                 <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-20">
                     {SKILLS.map((_, index) => (
                         <button 
@@ -80,6 +86,7 @@ const Skills = () => {
                 </div>
                 
             </div>
+            
             
         </section>
     )

@@ -26,12 +26,12 @@ const Contact = () => {
     
     }
     return (
-        <section id='contact' className="flex  mb-30">
+        <section id='contact' className="flex justify-center items-center mb-30">
             <RevealOnScroll>
                 <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-4">
                     <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300">Get In Touch</h2>
                     <div className='flex flex-col md:flex-row md:gap-5'>
-                        <form className="space-y-4 mb-30 w-full" onSubmit={handleSubmit}>
+                        <form className="space-y-4 mb-30 w-full md:w-200 lg:w-150" onSubmit={handleSubmit}>
                         <div className="relative">
                             <input 
                                 type="text" 
@@ -75,9 +75,9 @@ const Contact = () => {
                         </button>
                     </form>
                     <RevealOnScroll>
-                    <div className='w-full'>
-                        <img src={family} alt="" className='rounded-xl' />
-                    </div>
+                        <div className='md:w-70 lg:w-86'>
+                            <img src={family} alt="" className='rounded-xl' />
+                        </div>
                     </RevealOnScroll>
                     </div>
                 </div>

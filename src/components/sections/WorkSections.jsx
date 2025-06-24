@@ -2,6 +2,7 @@ import Accordion from './Accordion'
 import { MY_WORK } from '../../constants'
 import { InstagramEmbed } from 'react-social-media-embed'
 import { useState } from 'react'
+import RevealOnScroll from '../RevealOnScroll'
 
 const WorkSections = () => {
 
@@ -40,7 +41,7 @@ const WorkSections = () => {
     ))
     
     return (
-        
+            <RevealOnScroll>
             <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto  text-gray-300 text-xl mb-20 px-3">
                 {workSection}
                 {selectedImage && (
@@ -54,7 +55,7 @@ const WorkSections = () => {
                 </div>
                 )}
              </div>
-            
+            </RevealOnScroll>
        
     )
 }

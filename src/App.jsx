@@ -10,6 +10,7 @@ import Work from './components/sections/Work'
 import WorkSections from './components/sections/WorkSections'
 import Testimonials from './components/sections/Testimonials'
 import Contact from './components/sections/Contact'
+import Footer from './components/sections/Footer'
 
 const App = () => {
 
@@ -42,6 +43,7 @@ const App = () => {
       <WorkSections/>
       <Testimonials/>
       <Contact/>
+      <Footer/>
     </div>
     
   </div>

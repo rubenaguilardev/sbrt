@@ -22,6 +22,7 @@ const Work = () => {
                             <img src={MY_WORK_TOP[0].image} alt="" className='rounded-xl shadow-xl' />
                         </div>
                     </div>
+                    <RevealOnScroll>
                     <div className='flex flex-col md:flex-row-reverse w-full sm:pr-6 md:pr-7 md:mb-0 items-center'>
                         <div>
                             <p className='mb-5 md:mb-7'>{MY_WORK_TOP[1].description}</p>
@@ -29,8 +30,9 @@ const Work = () => {
                         <div className='flex justify-center items-center'>
                             <img src={MY_WORK_TOP[1].image} alt="" className='rounded-xl shadow-xl md:pr-7'/>
                         </div>
-                    
+
                     </div>
+                    </RevealOnScroll>
                 </div>
             </div>
             </RevealOnScroll>

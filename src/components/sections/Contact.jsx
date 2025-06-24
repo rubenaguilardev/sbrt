@@ -29,9 +29,9 @@ const Contact = () => {
         <section id='contact' className="flex justify-center items-center mb-30">
             <RevealOnScroll>
                 <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-4">
-                    <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300">Get In Touch</h2>
+                    <h2 className="text-3xl text-center md:text-start font-bold mb-5 md:mb-7 text-gray-300">Get In Touch</h2>
                     <div className='flex flex-col md:flex-row md:gap-5'>
-                        <form className="space-y-4 mb-30 w-full md:w-200 lg:w-150" onSubmit={handleSubmit}>
+                        <form className="space-y-4 xL:space-y-5 mb-30 w-full md:w-200 lg:w-180" onSubmit={handleSubmit}>
                         <div className="relative">
                             <input 
                                 type="text" 
@@ -39,7 +39,7 @@ const Contact = () => {
                                 name="name" 
                                 required 
                                 value={formData.name}
-                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5" 
+                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-4 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5" 
                                 placeholder='Name...'
                                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                             />  
@@ -75,7 +75,7 @@ const Contact = () => {
                         </button>
                     </form>
                     <RevealOnScroll>
-                        <div className='md:w-70 lg:w-86'>
+                        <div className='md:w-70 lg:w-90 xl:w-90'>
                             <img src={family} alt="" className='rounded-xl' />
                         </div>
                     </RevealOnScroll>

@@ -37,7 +37,7 @@ const Skills = () => {
 
     return(
         <section className="max-w-full md:w-[42.5rem] lg:w-[56.4rem] h-[540px] xl:w-[70.5rem] w-full m-auto 
-        relative group rounded-xl mb-40 shadow-2xl" 
+        relative group rounded-xl mb-20 shadow-2xl" 
             {...swipeHandlers}
         >
             

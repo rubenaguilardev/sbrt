@@ -3,7 +3,7 @@ import RevealOnScroll from "../RevealOnScroll"
 
 const About = () => {
     return (
-        <section id='about' className="flex items-center justify-center mb-40">
+        <section id='about' className="flex items-center justify-center mb-20">
             <RevealOnScroll>
                 <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-4">
                     <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300">About <span className="bg-gradient-to-r from-blue-500 to-purple-600 

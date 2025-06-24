@@ -49,7 +49,7 @@ const Skills = () => {
                 
                 <div className="absolute inset-0 bg-black/50 md:rounded-xl z-20">
 
-                    <div className="flex justify-center items-center justify-between h-full w-full">
+                    <div className="flex justify-center items-center md:justify-between h-full w-full">
                         <button 
                             onClick={prevSlide}
                             className="hidden md:flex bg-blue-500/80 text-gray-100 py-2 px-5 rounded text-xl transition realtive 

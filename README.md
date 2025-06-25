@@ -1,12 +1,13 @@
-# React + Vite
+The purpose of this project is to provide a sleek, responsive, professional online presence for a digital marketing professional. The portfolio site
+highlights the professional's marketing expertise by putting their skills on display through images, tabs, embeded post, text and more.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React and tailwind through vite was used to create this portfolio. 
+Reusable components with tailwind styling was implemented to organize and maintain its organized styling. 
+Swipeable was used for the skills and testimonial image carousels. setInterval gives the skills carousel auto-play. 
+Instagram-embed was implemented to load the IG post in the work section drop down menu. 
+Social Links displayed through font awesome icons.
+React Hooks: useState and useEffect were used for dynamic and interactive behavior.
 
-Currently, two official plugins are available:
+Vercel has been used for quick and easy deployment of the portfolio site.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+https://sbrt.vercel.app/

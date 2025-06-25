@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 const Navbar = ({menuOpen, setMenuOpen}) => {
-    const [lastScrollY, setLastScrollY] = useState(0);  
-    const [showNavbar, setShowNavbar] = useState(true);  
+    const [lastScrollY, setLastScrollY] = useState(0)  
+    const [showNavbar, setShowNavbar] = useState(true)
 
     useEffect(() => {
         
         const handleScroll = () => {
             if (window.scrollY > lastScrollY) {
-                setShowNavbar(false);
+                setShowNavbar(false)
             } else {
-                setShowNavbar(true);
+                setShowNavbar(true)
             }
 
-            setLastScrollY(window.scrollY);
+            setLastScrollY(window.scrollY)
         }
 
         window.addEventListener('scroll', handleScroll);
@@ -21,11 +21,11 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [lastScrollY]);
+    }, [lastScrollY])
 
     useEffect(() => {
-        document.body.style.overflow = menuOpen ? "hidden" : "";
-    }, [menuOpen]);
+        document.body.style.overflow = menuOpen ? "hidden" : ""
+    }, [menuOpen])
 
     return (
         <nav
@@ -34,9 +34,10 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
         >
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
-                    <a href="#home" className="font-mono text-md md:text-lg font-bold text-gray-300">
-                        social<span className="bg-gradient-to-r from-blue-500 to-purple-600 
-                bg-clip-text text-transparent">·buffington</span>
+                    <a 
+                        href="#home" className="font-mono text-md md:text-lg font-bold text-gray-300">
+                            social
+                        <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">·buffington</span>
                     </a>
 
                     <div
@@ -45,28 +46,37 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
                     >
                         &#9776;
                     </div>
-
                     <div className="hidden md:flex items-center space-x-8">
-                        <a href="#home" className="text-gray-300 hover:text-white transition-colors">
-                            Home
+                        <a 
+                            href="#home" 
+                            className="text-gray-300 hover:text-white transition-colors">
+                                Home
                         </a>
-                        <a href="#about" className="text-gray-300 hover:text-white transition-colors">
-                            About
+                        <a 
+                            href="#about" 
+                            className="text-gray-300 hover:text-white transition-colors">
+                                About
                         </a>
-                        <a href="#work" className="text-gray-300 hover:text-white transition-colors">
-                            My Work
+                        <a 
+                            href="#work" 
+                            className="text-gray-300 hover:text-white transition-colors">
+                                My Work
                         </a>
-                        <a href="#gallery" className="text-gray-300 hover:text-white transition-colors">
-                            Gallery
+                        <a 
+                            href="#gallery" 
+                            className="text-gray-300 hover:text-white transition-colors">
+                                Gallery
                         </a>
-                        <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
-                            Contact
+                        <a 
+                            href="#contact" 
+                            className="text-gray-300 hover:text-white transition-colors">
+                                Contact
                         </a>
                     </div>
                 </div>
             </div>
         </nav>
-    );
-};
+    )
+}
 
-export default Navbar;
+export default Navbar

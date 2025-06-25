@@ -51,7 +51,7 @@ const Contact = () => {
                                 name="email" 
                                 required 
                                 value={formData.email}
-                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5" 
+                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-[.8rem] text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5" 
                                 placeholder='example@gmail.com'
                                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                             />  
@@ -76,7 +76,7 @@ const Contact = () => {
                     </form>
                     <RevealOnScroll>
                         <div className='md:w-70 lg:w-90 xl:w-90'>
-                            <img src={family} alt="" className='rounded-xl' />
+                            <img src={family} alt="" className='rounded-xl text-shadow-2xl' />
                         </div>
                     </RevealOnScroll>
                     </div>

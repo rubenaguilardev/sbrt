@@ -2,13 +2,9 @@ import { useState } from 'react'
 
 
 const Accordion = ({id, label, instagram, design, blogs, icon, color}) => {
-
-    console.log(label)
     
     const [accordionOpen, setAccordionOpen] = useState(false)
-
-   console.log(blogs)
-    
+   
     return (
         <div key={id} className={`border-b border-white/10 hover:-translate-y-1 transition-all cursor-pointer py-4 px-1`}>
             <button onClick={() => setAccordionOpen(!accordionOpen)} className={"flex justify-between items-center w-full cursor-pointer"}>
@@ -42,8 +38,7 @@ const Accordion = ({id, label, instagram, design, blogs, icon, color}) => {
                     />
                 </svg>
             </button>
-            <div className={`grid overflow-hidden transition-all duration-300 ease-in-out text-sm text-gray-700 ${
-                accordionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+            <div className={`grid overflow-hidden transition-all duration-300 ease-in-out text-sm text-gray-700 ${accordionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
             }`}>
                 <div className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth hide-scrollbar min-w-0 gap-2">
                     {instagram}

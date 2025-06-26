@@ -34,7 +34,7 @@ const Contact = () => {
                     <h2 className="text-3xl text-center md:text-start font-bold mb-5 md:mb-7 text-gray-300">Get In Touch</h2>
                     <div className='flex flex-col md:flex-row md:gap-5'>
                         {showPopup && (
-                            <div className="fixed text-center w-3/4 top-40 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-gray-300 px-12 py-6 rounded-xl shadow-2xl z-50 transition-opacity duration-300">
+                            <div className="fixed text-center text-2xl md:w-1/3 w-3/4 top-40 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-gray-300 px-12 py-6 rounded-xl shadow-2xl z-50 transition-opacity duration-300">
                                 Message sent!
                             </div>
                         )}

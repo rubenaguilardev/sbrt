@@ -57,13 +57,13 @@ const Accordion = ({id, label, instagram, design, blogs, icon, color}) => {
                 <div className="relative w-full">
                 <button
                     onClick={scrollLeft}
-                    className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-blue-500/80 text-gray-100 py-2 px-5 p-2 rounded text-xl hover:bg-blue-500/70 cursor-pointer hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
+                    className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-blue-500/80 text-gray-100 py-2 px-5 rounded text-xl hover:bg-blue-500/70 cursor-pointer hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
                 >
                     &#60;
                 </button>
                 <div
                     ref={scrollRef} 
-                    className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth hide-scrollbar min-w-0 gap-3 px-10"
+                    className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth hide-scrollbar min-w-0 gap-3 px-3"
                 >
                         {instagram}
                         {design}
@@ -71,7 +71,7 @@ const Accordion = ({id, label, instagram, design, blogs, icon, color}) => {
                 </div>
                 <button
                     onClick={scrollRight}
-                    className="hidden md:flex absolute -right-1 top-1/2 -translate-y-1/2 z-30 bg-blue-500/80 text-gray-100 py-2 px-5 p-2 rounded text-xl hover:bg-blue-500/70 cursor-pointer hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
+                    className="hidden md:flex absolute right-1 top-1/2 -translate-y-1/2 z-30 bg-blue-500/80 text-gray-100 py-2 px-5 rounded text-xl hover:bg-blue-500/70 cursor-pointer hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
                 >
                     &#62;
                 </button>

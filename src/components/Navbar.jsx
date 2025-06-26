@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 const Navbar = ({menuOpen, setMenuOpen}) => {
     const [lastScrollY, setLastScrollY] = useState(0)  
     const [showNavbar, setShowNavbar] = useState(true)
+    const [isScrolled, setIsScrolled] = useState(false)
 
     useEffect(() => {
         
@@ -13,6 +14,7 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
                 setShowNavbar(true)
             }
 
+            setIsScrolled(window.scrollY > 50)
             setLastScrollY(window.scrollY)
         }
 
@@ -29,13 +31,13 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-40 backdrop-blur-lg border-b border-white/10  transition-transform 
-            ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
+            className={`fixed top-0 w-full z-40 backdrop-blur-lg border-b border-white/10  transition-transform ${showNavbar ? 'translate-y-0' : '-translate-y-full'} ${isScrolled ? 'bg-slate-950/55' : 'bg-transparent'}`}
         >
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     <a 
-                        href="#home" className="font-mono text-md md:text-lg font-bold text-gray-300">
+                        href="#home" 
+                        className="font-mono text-md md:text-lg font-bold text-gray-300">
                             social
                         <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">·buffington</span>
                     </a>

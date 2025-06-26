@@ -47,24 +47,24 @@ const WorkSections = () => {
                         {workSection}
                     </div>
                 </RevealOnScroll>
-                    {selectedImage && (
-                        <div 
-                            className='fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4' 
-                            onClick={() => setSelectedImage(null)}
-                        >
-                            <img 
-                                src={selectedImage} 
-                                alt='full view' 
-                                className='max-w-full max-h-full object-contain rounded-lg' 
-                                onClick={(e) => e.stopPropagation()}
-                            />
-                            <button 
-                                onClick={() => setSelectedImage(null)} 
-                                className='absolute top-6 right-6 text-blue-500 text-4xl cursor-pointer'>
-                                    &times;
-                            </button>
-                        </div>
-                    )}
+                {selectedImage && (
+                    <div 
+                        className='fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4' 
+                        onClick={() => setSelectedImage(null)}
+                    >
+                        <img 
+                            src={selectedImage} 
+                            alt='full view' 
+                            className='max-w-full max-h-full object-contain rounded-lg' 
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                        <button 
+                            onClick={() => setSelectedImage(null)} 
+                            className='absolute top-6 right-6 text-blue-500 text-5xl cursor-pointer'>
+                                &times;
+                        </button>
+                    </div>
+                )}
             </>
             
        

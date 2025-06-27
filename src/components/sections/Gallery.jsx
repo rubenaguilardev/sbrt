@@ -54,7 +54,7 @@ const Gallery = () => {
   return (
     <RevealOnScroll>
         <section id="gallery" className="flex flex-col justify-center items-center mb-30">
-            <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-6xl px-0 mb-3">
+            <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-6xl px-3 md:px-0 mb-3">
                 <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300"><span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">My </span>Photography</h2>
                 <Carousel
                 responsive={responsive}
@@ -64,7 +64,7 @@ const Gallery = () => {
                 customTransition="all 1s ease-in-out"
                 transitionDuration={1000}
                 containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
+                removeArrowOnDeviceType={["mobile"]}
                 customLeftArrow={<CustomLeftArrow />}
                 customRightArrow={<CustomRightArrow />}
                 itemClass="px-[6px]"
@@ -92,7 +92,7 @@ const Gallery = () => {
                     />
                 )}
             </div>
-            <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-6xl px-0">
+            <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-6xl px-3 md:px-0">
                 <Carousel
                 responsive={bottomSlider}
                 infinite
@@ -110,7 +110,7 @@ const Gallery = () => {
                     <div key={item.id} className="overflow-hidden">
                     <img
                         loading="lazy"
-                        src={item.img}
+                        src={item.sm}
                         alt={`Image ${item.id}`}
                         className="w-full h-52 object-cover rounded-lg transition-all duration-300 ease-in hover:scale-125"
                     />

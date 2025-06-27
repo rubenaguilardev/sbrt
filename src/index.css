@@ -86,3 +86,13 @@ body {
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important;
 }
 
+@media (max-width: 640px) {
+  .yarl__button {
+    background-color: transparent !important;
+  }
+
+  .yarl__button:hover {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}

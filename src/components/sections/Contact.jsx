@@ -28,7 +28,7 @@ const Contact = () => {
     
     }
     return (
-        <section id='contact' className="flex justify-center items-center mb-20">
+        <section id='contact' className="flex justify-center items-center mb-40">
             <RevealOnScroll>
                 <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-4">
                     <h2 className="text-3xl text-center md:text-start font-bold mb-5 md:mb-7 text-gray-300">Get In Touch</h2>

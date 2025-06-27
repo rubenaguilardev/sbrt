@@ -4,6 +4,7 @@ import { PHOTOS } from "../../constants/gallery";
 import { useState } from 'react'
 import Lightbox from 'yet-another-react-lightbox'
 import "yet-another-react-lightbox/styles.css";
+import RevealOnScroll from "../RevealOnScroll"
 
 const responsive = {
   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
@@ -51,71 +52,75 @@ const Gallery = () => {
     }
 
   return (
-    <section id="gallery" className="flex flex-col justify-center items-center mb-30">
-        <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-6xl px-3 mb-3">
-            <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300"><span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">My </span>Photography</h2>
-            <Carousel
-            responsive={responsive}
-            infinite
-            autoPlay={true}
-            autoPlaySpeed={3000}
-            customTransition="all 1s ease-in-out"
-            transitionDuration={1000}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            customLeftArrow={<CustomLeftArrow />}
-            customRightArrow={<CustomRightArrow />}
-            >
-            {PHOTOS.map((item, index) => (
-                <div 
-                    key={item.id}
-                    onClick={() => openLightbox(index)} 
-                    className="cursor-zoom-in">
-                <img
-                    loading="lazy"
-                    src={item.img}
-                    alt={`Image ${item.id}`}
-                    className="w-full h-110 sm:h-120 md:h-140 lg:h-160 xl:h-180 object-cover rounded-lg"
-                />
-                </div>
-            ))}
-            </Carousel>
-            {open && (
-                <Lightbox
-                    open={open}
-                    close={() => setOpen(false)}
-                    index={photoIndex}
-                    slides={PHOTOS.map(p => ({src: p.img}))}
-                />
-            )}
-        </div>
-        <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-6xl px-3">
-            <Carousel
-            responsive={bottomSlider}
-            infinite
-            autoPlay={true}
-            autoPlaySpeed={2000}
-            transitionDuration={2000}
-            customTransition="all 1s ease-in-out"
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-            customLeftArrow={<CustomLeftArrow />}
-            customRightArrow={<CustomRightArrow />}
-            >
-            {PHOTOS.map(item => (
-                <div key={item.id} className="overflow-hidden">
-                <img
-                    loading="lazy"
-                    src={item.img}
-                    alt={`Image ${item.id}`}
-                    className="w-full h-52 object-cover rounded-lg transition-all duration-300 ease-in hover:scale-125"
-                />
-                </div>
-            ))}
-            </Carousel>
-        </div>
-    </section>
-  );
-};
+    <RevealOnScroll>
+        <section id="gallery" className="flex flex-col justify-center items-center mb-30">
+            <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-6xl px-0 mb-3">
+                <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300"><span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">My </span>Photography</h2>
+                <Carousel
+                responsive={responsive}
+                infinite
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                customTransition="all 1s ease-in-out"
+                transitionDuration={1000}
+                containerClass="carousel-container"
+                removeArrowOnDeviceType={["tablet", "mobile"]}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
+                itemClass="px-[6px]"
+                >
+                {PHOTOS.map((item, index) => (
+                    <div 
+                        key={item.id}
+                        onClick={() => openLightbox(index)} 
+                        className="cursor-zoom-in">
+                    <img
+                        loading="lazy"
+                        src={item.img}
+                        alt={`Image ${item.id}`}
+                        className="w-full h-110 sm:h-120 md:h-140 lg:h-160 xl:h-180 object-cover rounded-lg"
+                    />
+                    </div>
+                ))}
+                </Carousel>
+                {open && (
+                    <Lightbox
+                        open={open}
+                        close={() => setOpen(false)}
+                        index={photoIndex}
+                        slides={PHOTOS.map(p => ({src: p.img}))}
+                    />
+                )}
+            </div>
+            <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-6xl px-0">
+                <Carousel
+                responsive={bottomSlider}
+                infinite
+                autoPlay={true}
+                autoPlaySpeed={2000}
+                transitionDuration={2000}
+                customTransition="all 1s ease-in-out"
+                containerClass="carousel-container"
+                removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
+                itemClass="px-[6px]"
+                >
+                {PHOTOS.map(item => (
+                    <div key={item.id} className="overflow-hidden">
+                    <img
+                        loading="lazy"
+                        src={item.img}
+                        alt={`Image ${item.id}`}
+                        className="w-full h-52 object-cover rounded-lg transition-all duration-300 ease-in hover:scale-125"
+                    />
+                    </div>
+                ))}
+                </Carousel>
+            </div>
+        </section>
+    </RevealOnScroll>
+  )
+}
 
-export default Gallery;
+export default Gallery

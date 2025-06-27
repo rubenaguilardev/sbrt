@@ -51,8 +51,7 @@ const Skills = () => {
                     <div className="flex justify-center items-center md:justify-between h-full w-full">
                         <button 
                             onClick={prevSlide}
-                            className="hidden md:flex bg-blue-500/80 text-gray-100 py-2 px-5 rounded text-xl transition realtive 
-                            hover:bg-blue-500/70 overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] cursor-pointer ml-7">
+                            className="hidden md:flex bg-blue-500/80 text-gray-100 py-2 px-5 rounded text-xl transition realtive hover:bg-blue-500/70 overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] cursor-pointer ml-7">
                                 &#60;
                         </button>
                         <RevealOnScroll>

@@ -61,105 +61,227 @@ import photo55 from '../assets/gallery/055.jpg'
 
 export const PHOTOS = [
     {
-    img: photo1,
-    id: 1,
-  },
-  {
-    img: photo2,
-    id: 2,
-  },
-  {
-    img: photo3,
-    id: 3,
-  },
-  {
-    img: photo4,
-    id: 4,
-  },
-  {
-    img: photo5,
-    id: 5,
-  }
+        img: photo1,
+        id: 1,
+    },
+    {
+        img: photo2,
+        id: 2,
+    },
+    {
+        img: photo3,
+        id: 3,
+    },
+    {
+        img: photo4,
+        id: 4,
+    },
+    {
+        img: photo5,
+        id: 5,
+    },
+    {
+        img: photo6,
+        id: 6,
+    },
+    {
+        img: photo7,
+        id: 7,
+    },
+    {
+        img: photo8,
+        id: 8,
+    },
+    {
+        img: photo9,
+        id: 9,
+    },
+    {
+        img: photo10,
+        id: 10,
+    },
+    {
+        img: photo11,
+        id: 11,
+    },
+    {
+        img: photo12,
+        id: 12,
+    },
+    {
+        img: photo13,
+        id: 13,
+    },
+    {
+        img: photo14,
+        id: 14,
+    },
+    {
+        img: photo15,
+        id: 15,
+    },
+    {
+        img: photo16,
+        id: 16,
+    },
+    {
+        img: photo17,
+        id: 17,
+    },
+    {
+        img: photo18,
+        id: 18,
+    },
+    {
+        img: photo19,
+        id: 19,
+    },
+    {
+        img: photo20,
+        id: 20,
+    },
+     {
+        img: photo21,
+        id: 21,
+    },
+    {
+        img: photo22,
+        id: 22,
+    },
+    {
+        img: photo23,
+        id: 23,
+    },
+    {
+        img: photo24,
+        id: 24,
+    },
+    {
+        img: photo25,
+        id: 25,
+    },
+    {
+        img: photo26,
+        id: 26,
+    },
+    {
+        img: photo27,
+        id: 27,
+    },
+    {
+        img: photo28,
+        id: 28,
+    },
+    {
+        img: photo29,
+        id: 29,
+    },
+    {
+        img: photo30,
+        id: 30,
+    },
+    {
+        img: photo31,
+        id: 31,
+    },
+    {
+        img: photo32,
+        id: 32,
+    },
+     {
+        img: photo33,
+        id: 33,
+    },
+    {
+        img: photo34,
+        id: 34,
+    },
+    {
+        img: photo35,
+        id: 35,
+    },
+    {
+        img: photo36,
+        id: 36,
+    },
+    {
+        img: photo37,
+        id: 37,
+    },
+    {
+        img: photo38,
+        id: 38,
+    },
+    {
+        img: photo39,
+        id: 39,
+    },
+    {
+        img: photo40,
+        id: 40,
+    },
+    {
+        img: photo41,
+        id: 41,
+    },
+    {
+        img: photo42,
+        id: 42,
+    },
+     {
+        img: photo43,
+        id: 43,
+    },
+    {
+        img: photo44,
+        id: 44,
+    },
+    {
+        img: photo45,
+        id: 45,
+    },
+    {
+        img: photo46,
+        id: 46,
+    },
+    {
+        img: photo47,
+        id: 47,
+    },
+    {
+        img: photo48,
+        id: 48,
+    },
+    {
+        img: photo49,
+        id: 49,
+    },
+    {
+        img: photo50,
+        id: 50,
+    },
+    {
+        img: photo51,
+        id: 51,
+    },
+     {
+        img: photo52,
+        id: 52,
+    },
+     {
+        img: photo53,
+        id: 53,
+    },
+     {
+        img: photo54,
+        id: 54,
+    },
+    {
+        img: photo55,
+        id: 55,
+    },
 ]
-//   {
-//     original: photo6,
-//     thumbnail: photo6,
-//   },
-//   {
-//     original: photo7,
-//     thumbnail: photo7,
-//   },
-//   {
-//     original: photo8,
-//     thumbnail: photo8,
-//   },
-//   {
-//     original: photo9,
-//     thumbnail: photo9,
-//   },
-//   {
-//     original: photo10,
-//     thumbnail: photo10,
-//   },
-//   {
-//     original: photo11,
-//     thumbnail: photo11,
-//   },
-//     photo1, 
-//     photo2, 
-//     photo3, 
-//     photo4, 
-//     photo5, 
-//     photo6, 
-//     photo7, 
-//     photo8, 
-//     photo9, 
-//     photo10, 
-//     photo11,
-//     photo12,
-//     photo13,
-//     photo14,
-//     photo15,
-//     photo16,
-//     photo17,
-//     photo18,
-//     photo19,
-//     photo20,
-//     photo21,
-//     photo22,
-//     photo23,
-//     photo24,
-//     photo25,
-//     photo26,
-//     photo27,
-//     photo28,
-//     photo29,
-//     photo30,
-//     photo31,
-//     photo32,
-//     photo33,
-//     photo34,
-//     photo35,
-//     photo36,
-//     photo37,
-//     photo38,
-//     photo39,
-//     photo40,
-//     photo41,
-//     photo42,
-//     photo43,
-//     photo44,
-//     photo45,
-//     photo46,
-//     photo47,
-//     photo48,
-//     photo49,
-//     photo50,
-//     photo51,
-//     photo52,
-//     photo53,
-//     photo54,
-//     photo55
-// ]
+ 
+
 
 

@@ -41,9 +41,9 @@ const WorkSections = () => {
     ))
     
     return (
-            <section className='flex justify-center items-center mb-30'>
+            <>
                 <RevealOnScroll>
-                    <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto  text-gray-300 text-xl px-3">
+                    <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto  text-gray-300 text-xl mb-30 px-3">
                         {workSection}
                     </div>
                 </RevealOnScroll>
@@ -65,7 +65,7 @@ const WorkSections = () => {
                         </button>
                     </div>
                 )}
-            </section>
+            </>
             
        
     )

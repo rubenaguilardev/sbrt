@@ -5,7 +5,7 @@ import { PHOTOS } from "../../constants/gallery";
 const responsive = {
   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
   tablet:  { breakpoint: { max: 1024, min: 464 },  items: 2 },
-  mobile:  { breakpoint: { max: 464,  min: 0 },    items: 2 },
+  mobile:  { breakpoint: { max: 464,  min: 0 },    items: 1 },
 };
 
 const CustomLeftArrow = ({ onClick }) => {
@@ -41,18 +41,17 @@ const Gallery = () => {
           autoPlay={true}
           transitionDuration={1000}
           containerClass="carousel-container"
-          dotListClass="py-2"
           removeArrowOnDeviceType={["tablet", "mobile"]}
           customLeftArrow={<CustomLeftArrow />}
           customRightArrow={<CustomRightArrow />}
         >
           {PHOTOS.map(item => (
-            <div key={item.id} className="px-2">
+            <div key={item.id} className="px-1">
               <img
                 loading="lazy"
                 src={item.img}
                 alt={`Image ${item.id}`}
-                className="w-full max-h-[480px] object-cover rounded-2xl"
+                className="w-full object-cover rounded-xl"
               />
             </div>
           ))}

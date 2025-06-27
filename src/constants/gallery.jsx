@@ -276,7 +276,8 @@ export const PHOTOS = [
         img: photo54,
         id: 54,
     },
-    {
+
+     {
         img: photo55,
         id: 55,
     },

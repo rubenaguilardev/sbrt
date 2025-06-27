@@ -13,8 +13,8 @@ const Contact = () => {
     })
 
     const SERVICE_ID = 'service_sxadgqs'
-        const TEMPLATE_ID = 'template_2v3s2dq'
-        const PUBLIC_KEY = 'TjiFoy8zhupcvv7ez'
+    const TEMPLATE_ID = 'template_2v3s2dq'
+    const PUBLIC_KEY = 'TjiFoy8zhupcvv7ez'
 
     const handleSubmit = (e) => {
 

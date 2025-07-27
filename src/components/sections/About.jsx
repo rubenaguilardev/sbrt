@@ -1,5 +1,6 @@
 import { profilePicture } from "../../constants"
 import RevealOnScroll from "../RevealOnScroll"
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa6'
 
 const About = () => {
     return (
@@ -16,7 +17,26 @@ const About = () => {
                                 When I'm not conquering the marketing world, you can find me exploring my love for culinary 
                                 arts and soaking up precious moments with my family.
                             </p>
-                            <p>Intrigued?  Let's Connect!</p>
+                            <div className="flex items-center gap-5">
+                                <p>Intrigued?  Let's Connect!</p> 
+                                <div className='flex justify-between text-4xl text-blue-500 md:hidden gap-2'>
+                                    <div>
+                                        <a href="https://www.linkedin.com/in/jazmin-aguilar-buffington/" className="text-4xl">
+                                            <FaLinkedin />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="mailto:jazmin.a.buffington@gmail.com">
+                                            <FaEnvelope/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a 
+                                    className="hidden md:block bg-blue-500/80 text-gray-100 py-2 px-5 rounded font-medium transition realtive overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]" 
+                                    href="https://www.linkedin.com/in/jazmin-aguilar-buffington/</div>">
+                                        Linkedin
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -33,7 +33,7 @@ const About = () => {
                                 </div>
                                 <a 
                                     className="hidden md:block bg-blue-500/80 text-gray-100 py-2 px-5 rounded font-medium transition realtive overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]" 
-                                    href="https://www.linkedin.com/in/jazmin-aguilar-buffington/</div>">
+                                    href="https://www.linkedin.com/in/jazmin-aguilar-buffington/">
                                         Linkedin
                                 </a>
                             </div>

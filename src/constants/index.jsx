@@ -79,11 +79,12 @@ export const MY_WORK = [
         color: `bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600`,
         content: 
             [
-                'https://www.instagram.com/reel/C9ieGxNJ0ih/?utm_source=ig_embed&ig_rid=bf0eaf37-43c8-4e0f-9baf-f2748daac228',
                 'https://www.instagram.com/p/C-VZOSSp9MF/?utm_source=ig_embed&ig_rid=157e34e4-12e4-4f4a-87b1-5fc3fd6bdc16',
                 'https://www.instagram.com/reel/CiAvfAlLNfH/?utm_source=ig_embed&ig_rid=40da67ba-387e-4338-94e3-f2a3d66d7673',
                 'https://www.instagram.com/reel/CtMxej3Az9W/?utm_source=ig_embed&ig_rid=442be97e-5a26-4812-89d9-66719da79ed4',
-                'https://www.instagram.com/reel/CdtN-A2po3O/?utm_source=ig_embed&ig_rid=bd197f9c-5dc9-4bae-b3d5-7eafaea43ff7'
+                'https://www.instagram.com/reel/CdtN-A2po3O/?utm_source=ig_embed&ig_rid=bd197f9c-5dc9-4bae-b3d5-7eafaea43ff7',
+                'https://www.instagram.com/reel/C9ieGxNJ0ih/?utm_source=ig_embed&ig_rid=bf0eaf37-43c8-4e0f-9baf-f2748daac228'
+
             ]
      },
 

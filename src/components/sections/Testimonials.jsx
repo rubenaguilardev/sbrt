@@ -30,7 +30,7 @@ const Testimonials = () => {
     return(
         <section className="flex justify-center items-center mb-40">
             <div
-                className="max-w-full md:w-[42.5rem] lg:w-[56.4rem] h-[540px] xl:w-[70.5rem] w-full m-auto relative group rounded-xlshadow-2xl" 
+                className="max-w-full md:w-[42.5rem] lg:w-[56.4rem] h-[540px] xl:w-[70.5rem] w-full m-auto relative group rounded-xlshadow-2xl md:px-1" 
                 {...swipeHandlers}
             >
                 <h2 className="text-xl md:text-2xl text-center font-bold mb-5 md:mb-7 text-gray-300">What Colleagues Say About <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Me</span></h2>

@@ -330,7 +330,7 @@ export const PHOTOS = [
         id: 43,
     },
     {
-        sm: photo12sm,
+        sm: photo1sm,
         img: photo44,
         id: 44,
     },
@@ -385,7 +385,7 @@ export const PHOTOS = [
         id: 54,
     },
     {
-        sm: photo1sm,
+        sm: photo12sm,
         img: photo55,
         id: 55,
     },

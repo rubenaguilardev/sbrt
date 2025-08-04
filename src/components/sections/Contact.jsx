@@ -30,7 +30,7 @@ const Contact = () => {
     return (
         <section id='contact' className="flex justify-center items-center mb-40">
             <RevealOnScroll>
-                <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-3 md:px-0">
+                <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-6xl mx-auto px-3 md:px-1">
                     <h2 className="text-3xl text-center md:text-start font-bold mb-5 md:mb-7 text-gray-300">Get In Touch</h2>
                     <div className='flex flex-col md:flex-row md:gap-5'>
                         {showPopup && (
@@ -39,7 +39,7 @@ const Contact = () => {
                             </div>
                         )}
                         <form 
-                            className="space-y-4 xL:space-y-5 mb-30 w-full md:w-200 lg:w-180" 
+                            className="space-y-4 xl:space-y-4 mb-30 w-full md:w-210 lg:w-180" 
                             onSubmit={handleSubmit}
                         >
                         <div className="relative">

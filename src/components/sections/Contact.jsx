@@ -12,15 +12,11 @@ const Contact = () => {
         message: ''
     })
 
-    const SERVICE_ID = 'service_sxadgqs'
-    const TEMPLATE_ID = 'template_2v3s2dq'
-    const PUBLIC_KEY = 'TjiFoy8zhupcvv7ez'
-
     const handleSubmit = (e) => {
 
         e.preventDefault()
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(() => {
+        emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY).then(() => {
             setFormData({name: '', email: '', message: ''})
             setShowPopup(true)
             setTimeout(() => setShowPopup(false), 3000)

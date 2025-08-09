@@ -14,12 +14,11 @@ const Footer = () => {
                     <div>
                         <a href="mailto:jazmin.a.buffington@gmail.com">
                             <FaEnvelope/>
-                            hi
                         </a>
                     </div>
                 </div>
             </div>
-            <p className='text-gray-400 text-xs text-center mt-6'>{new Date().getFullYear()} Social Buffington. All rights reserved.</p>
+            <p className='text-gray-500 text-xs text-center mt-6'>{new Date().getFullYear()} Social Buffington. All rights reserved.</p>
         </section>
     )
 }

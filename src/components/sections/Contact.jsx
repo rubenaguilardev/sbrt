@@ -27,7 +27,7 @@ const Contact = () => {
         <section id='contact' className="flex justify-center items-center mb-40">
             <RevealOnScroll>
                 <div className="max-w-2xl md:max-w-[44rem] lg:max-w-[58rem] xl:max-w-[80rem] mx-auto px-3 md:px-1">
-                    <h2 className="text-3xl text-center md:text-start font-bold mb-5 md:mb-7 text-gray-300">Get In Touch</h2>
+                    <h2 className="text-3xl text-center md:text-start font-bold mb-5 md:mb-7 text-gray-300">Get in <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Touch</span></h2>
                     <div className='flex flex-col md:flex-row md:gap-5'>
                         {showPopup && (
                             <div className="fixed text-center text-2xl md:w-1/3 w-3/4 top-40 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-gray-300 px-12 py-6 rounded-xl shadow-2xl z-50 transition-opacity duration-300">

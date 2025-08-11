@@ -112,7 +112,8 @@ const Gallery = () => {
                     <div key={item.id} className="overflow-hidden">
                     <img
                         loading="lazy"
-                        src={item.sm}
+                        src={window.innerWidth < 768 ? item.sm : item.img}
+                        
                         alt={Image}
                         className="w-full h-52 object-cover rounded-lg transition-all duration-300 ease-in hover:scale-125"
                     />

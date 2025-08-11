@@ -78,7 +78,7 @@ const Gallery = () => {
                         className="cursor-zoom-in">
                     <img
                         loading="lazy"
-                        src={item.img}
+                        src={window.innerWidth < 768 ? item.sm : item.img}
                         alt={Image}
                         className="w-full h-110 sm:h-120 md:h-140 lg:h-160 xl:h-180 object-cover rounded-lg"
                     />
@@ -112,7 +112,7 @@ const Gallery = () => {
                     <div key={item.id} className="overflow-hidden">
                     <img
                         loading="lazy"
-                        src={window.innerWidth < 768 ? item.sm : item.img}
+                        src={item.sm}
                         
                         alt={Image}
                         className="w-full h-52 object-cover rounded-lg transition-all duration-300 ease-in hover:scale-125"

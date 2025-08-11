@@ -15,6 +15,7 @@ import design3 from '../assets/design/3.png'
 import design4 from '../assets/design/4.png'
 import design5 from '../assets/design/5.png'
 import design6 from '../assets/design/6.png'
+import design7 from '../assets/design/7.png'
 import blog1 from '../assets/blogs/1.png'
 import blog2 from '../assets/blogs/2.png'
 import blog3 from '../assets/blogs/3.png'
@@ -94,7 +95,7 @@ export const MY_WORK = [
         icon: <i className="fa fa-palette"/>,
         color: `bg-gradient-to-br from-pink-500 via-rose-400 to-red-300`,
         content: [
-            design1, design2, design3, design4, design5, design6
+            design1, design2, design3, design4, design5, design6, design7
         ]
     },
 

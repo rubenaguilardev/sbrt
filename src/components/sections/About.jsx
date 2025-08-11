@@ -19,10 +19,10 @@ const About = () => {
                             <p className="mb-5 md:mb-7">
                                 When I’m not crafting campaigns, you’ll find me in the kitchen experimenting with flavors or enjoying time with my favorite people.
                             </p>
-                            <div className="flex items-center gap-5 mb-5 md:mb-7">
-                                <p>Intrigued? Let’s connect and create something worth remembering.</p> 
-                                
-                                <div className='flex justify-between text-4xl text-blue-500 md:hidden gap-2'>
+                            <div className="flex items-center gap-5 md:mb-7">
+                                <p>Intrigued? Let’s connect and create something worth remembering.</p>  
+                            </div>
+                            <div className='flex justify-center ml-20 text-4xl text-blue-500 md:hidden gap-2'>
                                     <div>
                                         <a href="https://www.linkedin.com/in/jazmin-aguilar-buffington/" className="text-4xl">
                                             <FaLinkedin />
@@ -34,10 +34,7 @@ const About = () => {
                                         </a>
                                     </div>
                                 </div>
-                                
-                                
-                            </div>
-                            <a 
+                                <a 
                                     className="hidden md:block w-fit bg-blue-500/80 text-gray-100 py-2 px-5 rounded font-medium transition realtive overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]" 
                                     href="https://www.linkedin.com/in/jazmin-aguilar-buffington/">
                                         Linkedin

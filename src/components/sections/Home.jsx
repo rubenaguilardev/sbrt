@@ -2,14 +2,13 @@ const Home = () => {
     return (
         <section id='home' className="min-h-screen flex items-center justify-center relative">
             <div className="text-center z-10 px-4">
-                <span className="text-lg text-gray-400">Hi, nice to meet you. My name is</span>
+                <span className="text-lg text-gray-400">Hi, nice to meet you.</span>
                 <h1 className="text-6xl md:text-7xl lg:text-[5.5rem] xl:text-8xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent mb-6 leading-[1.25]">
-                    Jazmin Buffington.
+                    Jazmin Buffington
                 </h1>
+                <p className="text-gray-400 text-xl font-bold max-w-lg md:max-w-xl lg:max-w-2xl mb-1 mx-auto">CREATIVITY WITH A STRATEGY</p>
                 <p className="text-gray-400 text-lg mb-8 max-w-lg md:max-w-xl lg:max-w-2xl mx-auto">
-                    I'm a dynamic marketing guru with a passion for creativity and innovation.
-                    With over a decade of experience under my belt, I specialize in all things social media, 
-                    digital marketing, photography, design, and epic event planning.
+                    Helping brands shine across social, digital, design, and events since 2011.
                 </p>
                 <div className="flex justify-center space-x-4">
                     <a 

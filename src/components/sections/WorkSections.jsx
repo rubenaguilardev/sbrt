@@ -22,8 +22,8 @@ const WorkSections = () => {
             ))}
 
             design={section.id === 1 && section.content.map((item, index) => (
-                <div key={index} className=" snap-center cursor-pointer w-[300px] h-[350px] overflow-hidden rounded-lg flex-shrink-0 mt-4 mb-2" onClick={() => setSelectedImage(item)}>
-                    <img key={index} src={item} alt={`design picture ${index}`} className="w-[140%] h-full object-cover object-top transition-transform duration-300 hover:scale-105"/>
+                <div key={index} className=" snap-center cursor-pointer w-[300px] h-[350px] object-fill overflow-hidden rounded-lg flex-shrink-0 mt-4 mb-2" onClick={() => setSelectedImage(item)}>
+                    <img key={index} src={item} alt={`design picture ${index}`} className="w-[100%] object-top transition-transform duration-300 hover:scale-105"/>
                 </div>
             ))}
 

@@ -8,10 +8,11 @@ import About from './components/sections/About'
 import Skills from './components/sections/Skills'
 import Work from './components/sections/Work'
 import WorkSections from './components/sections/WorkSections'
-// import Gallery from './components/sections/Gallery'
+import Gallery from './components/sections/Gallery'
 import Testimonials from './components/sections/Testimonials'
 import Contact from './components/sections/Contact'
 import Footer from './components/sections/Footer'
+
 
 const App = () => {
 
@@ -42,7 +43,7 @@ const App = () => {
         <Skills />
         <Work/>
         <WorkSections/>
-        {/* <Gallery/> */}
+        <Gallery/>
         <Testimonials/>
         <Contact/>
         <Footer/>

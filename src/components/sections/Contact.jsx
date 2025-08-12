@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import RevealOnScroll from "../RevealOnScroll"
 import emailjs from 'emailjs-com'
-import family from '../../assets/family.jpg'
+import family from '../../assets/family.avif'
 
 const Contact = () => {
 

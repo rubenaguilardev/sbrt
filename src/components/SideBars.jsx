@@ -11,7 +11,7 @@ const Sidebars = () => {
           <div className="flex flex-col items-center justify-end text-blue-500 pointer-events-auto">
             <a 
               href="https://www.linkedin.com/in/jazmin-aguilar-buffington/" 
-              className="mb-4 hover:text-gray-300 text-2xl hover:-translate-y-1 transition-all">
+              className="mb-4 hover:text-gray-400 text-2xl hover:-translate-y-1 transition-all">
                 <FaLinkedin />
             </a>
             <div className="w-px h-30 mt-4 bg-gradient-to-t border-white/10 border bg-clip-border text-transparent"/>
@@ -19,7 +19,7 @@ const Sidebars = () => {
           <div className="flex flex-col items-center pointer-events-auto bg-gradient-to-b from-blue-500 to-purple-600 bg-clip-text text-transparent hover:-translate-y-1 transition-all">
             <a 
               href={`mailto:${email}`}
-              className="mb-4 text-sm tracking-widest hover:text-gray-300 transition"
+              className="mb-4 text-sm tracking-widest hover:text-gray-400 transition"
               style={{ writingMode: 'vertical-rl' }}>
                 {email}
             </a>

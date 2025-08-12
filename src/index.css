@@ -97,10 +97,5 @@ body {
   }
 }
 
-.slowSwipe {
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
+
 

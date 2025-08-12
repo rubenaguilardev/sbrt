@@ -13,7 +13,7 @@ const About = () => {
                         </div>
                         <div className="flex flex-col justify-evenly md:w-3/4 text-gray-300">
                             <div>
-                                <h2 className="text-3xl text-center md:text-left font-bold mb-5 md:mb-7 text-gray-300"><span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">About </span>Me</h2> 
+                                <h2 className="text-3xl text-center md:text-left font-bold  text-gray-300"><span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">About </span>Me</h2> 
                             </div>
                             <div>
                                 <p className="mb-5 text-[.95rem] lg:mb-7">

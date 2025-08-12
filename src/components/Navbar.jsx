@@ -67,7 +67,7 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
                         <a 
                             href="#gallery" 
                             className="text-gray-300 hover:text-white transition-colors">
-                                Gallery
+                                Photography
                         </a>
                         <a 
                             href="#contact" 

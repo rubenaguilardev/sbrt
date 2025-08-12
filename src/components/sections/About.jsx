@@ -16,7 +16,7 @@ const About = () => {
                                 <h2 className="text-3xl text-center md:text-left font-bold mb-5 md:mb-7 xl:mb-0 text-gray-300"><span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">About </span>Me</h2> 
                             </div>
                             <div>
-                                <p className="mb-5 text-[.95rem] lg:mb-7">
+                                <p className="mb-5 text-[.95rem] lg:mb-6">
                                 Hi, nice to meet you. I’m a marketing strategist with over a decade of experience bringing brands to life through social media, digital campaigns, photography, design, and events that get people talking. My approach blends creativity with strategy—turning big ideas into measurable impact.
                                 </p>
                                 <p className="mb-5 text-[.95rem] lg:mb-7">

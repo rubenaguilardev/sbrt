@@ -18,7 +18,7 @@ const WorkSections = () => {
             label={section.label}
 
             instagram={section.id === 0 && section.content.map((item, index) => (
-                <div key={index} className="snap-center shrink-0 max-w-md rounded-lg transition-transform duration-300 hover:scale-102 mt-4">
+                <div key={index} className="snap-center shrink-0 max-w-md rounded-lg transition-transform duration-300 hover:scale-102 mt-4 slowSwipe">
                     <InstagramEmbed url={item}/> 
                 </div>
             ))}

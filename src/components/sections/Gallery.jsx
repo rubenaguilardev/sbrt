@@ -86,13 +86,15 @@ const Gallery = () => {
                 ))}
                 </Carousel>
                 {open && (
-                    <Lightbox
-                        open={open}
-                        close={() => setOpen(false)}
-                        index={photoIndex}
-                        slides={PHOTOS.map(p => ({src: p.sm}))}
-                    />
-                )}
+  <Lightbox
+    open={open}
+    close={() => setOpen(false)}
+    index={photoIndex}
+    slides={PHOTOS.map(p => ({
+      src: window.innerWidth < 768 ? p.sm : p.img
+    }))}
+  />
+)}
             </div>
             <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-[72.5rem] px-3 md:px-1">
                 <Carousel

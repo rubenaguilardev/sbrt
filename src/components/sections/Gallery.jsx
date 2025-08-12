@@ -42,7 +42,6 @@ const CustomRightArrow = ({ onClick }) => {
   )
 }
 
-
 const Gallery = () => {
 
     const [open, setOpen] = useState(false)
@@ -77,9 +76,10 @@ const Gallery = () => {
                         onClick={() => openLightbox(index)} 
                         className="cursor-zoom-in">
                     <img
+                        key={item.id}
                         loading="lazy"
                         src={window.innerWidth < 768 ? item.sm : item.img}
-                        alt={Image}
+                        alt={''}
                         className="w-full h-110 sm:h-120 md:h-140 lg:h-160 xl:h-180 object-cover rounded-lg"
                     />
                     </div>
@@ -90,7 +90,7 @@ const Gallery = () => {
                         open={open}
                         close={() => setOpen(false)}
                         index={photoIndex}
-                        slides={PHOTOS.map(p => ({src: p.img}))}
+                        slides={PHOTOS.map(p => ({src: p.sm}))}
                     />
                 )}
             </div>
@@ -109,12 +109,13 @@ const Gallery = () => {
                 itemClass="px-[6px]"
                 >
                 {PHOTOS.map(item => (
-                    <div key={item.id} className="overflow-hidden">
+                    <div className="overflow-hidden" key={item.id}>
                     <img
+                        key={item.id}
                         loading="lazy"
-                        src={item.sm}
+                        src={item.randomSM}
                         
-                        alt={Image}
+                        alt=''
                         className="w-full h-52 object-cover rounded-lg transition-all duration-300 ease-in hover:scale-125"
                     />
                     </div>

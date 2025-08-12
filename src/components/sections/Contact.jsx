@@ -83,7 +83,7 @@ const Contact = () => {
                     </form>
                     <RevealOnScroll>
                         <div className='md:w-70 lg:w-90 xl:w-90'>
-                            <img src={family} alt="" className='rounded-xl text-shadow-2xl' />
+                            <img src={family} alt="Picture of Jazmin's family" className='rounded-xl text-shadow-2xl' />
                         </div>
                     </RevealOnScroll>
                     </div>

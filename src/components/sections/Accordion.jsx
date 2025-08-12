@@ -16,7 +16,6 @@ const Accordion = ({id, label, instagram, design, blogs, icon, color}) => {
 
     return (
         <div 
-            key={id} 
             className={`border-b border-white/10 hover:-translate-y-1 transition-all cursor-pointer py-4`}
         >
             <button 

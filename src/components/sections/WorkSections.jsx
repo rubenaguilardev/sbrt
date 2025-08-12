@@ -11,10 +11,12 @@ const WorkSections = () => {
     const workSection = MY_WORK.map((section, index) => (
         
         <Accordion
+            key={index} 
             color={section.color}
             icon={section.icon}
             id={section.id} 
             label={section.label}
+
             instagram={section.id === 0 && section.content.map((item, index) => (
                 <div key={index} className="snap-center shrink-0 max-w-md rounded-lg transition-transform duration-300 hover:scale-102 mt-4">
                     <InstagramEmbed url={item}/> 
@@ -23,15 +25,15 @@ const WorkSections = () => {
 
             design={section.id === 1 && section.content.map((item, index) => (
                 <div key={index} className=" snap-center cursor-pointer w-[300px] h-[350px] object-fill overflow-hidden rounded-lg flex-shrink-0 mt-4 mb-2" onClick={() => setSelectedImage(item)}>
-                    <img key={index} src={item} alt={`design picture ${index}`} className="w-[100%] object-top transition-transform duration-300 hover:scale-105"/>
+                    <img src={item} alt={`design picture ${index}`} className="w-[100%] object-top transition-transform duration-300 hover:scale-105"/>
                 </div>
             ))}
 
             blogs={section.id === 2 && section.content.map((post, index) => (
-                    <a href={post.url}>
-                        <div key={index} className='flex flex-col mb-2 mt-4 snap-center transition-transform duration-300 hover:scale-102'>
+                    <a key={index}  href={post.url}>
+                        <div className='flex flex-col mb-2 mt-4 snap-center transition-transform duration-300 hover:scale-102'>
                             <div className='w-[220px] md:w-[260px] object-fit'>
-                                <img src={post.image} className='rounded-t-lg'/>
+                                <img src={post.image} className='rounded-t-lg' alt="blog cover image"/>
                             </div>
                             <p className='max-w-[260px] rounded-b-lg text-gray-700 text-center p-3 xl:p-5 text-sm bg-[whitesmoke]'>{post.description}</p>
                         </div>

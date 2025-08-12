@@ -17,7 +17,7 @@ const Work = () => {
                                 <p className='mb-5 md:pr-7'>{MY_WORK_TOP[0].description[1]}</p>
                             </div>
                             <div className='flex justify-center items-center'>
-                                <img src={MY_WORK_TOP[0].image} alt="" className='rounded-xl shadow-xl'/>
+                                <img src={MY_WORK_TOP[0].image} alt="image of Wyndham dinner " className='rounded-xl shadow-xl'/>
                             </div>
                         </div>
                         <RevealOnScroll>
@@ -26,7 +26,7 @@ const Work = () => {
                                     <p className='mb-5 md:mb-7'>{MY_WORK_TOP[1].description}</p>
                                 </div>
                                 <div className='flex justify-center items-center'>
-                                    <img src={MY_WORK_TOP[1].image} alt="" className='rounded-xl shadow-xl md:pr-7'/>
+                                    <img src={MY_WORK_TOP[1].image} alt="image of Margaritaville lobby" className='rounded-xl shadow-xl md:pr-7'/>
                                 </div>
                             </div>
                         </RevealOnScroll>

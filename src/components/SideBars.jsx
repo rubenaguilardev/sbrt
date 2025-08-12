@@ -5,9 +5,9 @@ const Sidebars = () => {
   const email = 'jazmin.a.buffington@gmail.com'
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div>
       <div className="fixed bottom-0 left-0 right-0 z-51 hidden md:flex pointer-events-none">
-        <div className="w-full max-w-7xl mx-auto px-4 flex justify-between">
+        <div className="w-full max-w-8xl mx-auto px-4 flex justify-between">
           <div className="flex flex-col items-center justify-end text-blue-500 pointer-events-auto">
             <a 
               href="https://www.linkedin.com/in/jazmin-aguilar-buffington/" 

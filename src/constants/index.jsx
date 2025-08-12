@@ -23,7 +23,7 @@ import blog4 from '../assets/blogs/4.avif'
 import testimonial2 from '../assets/testimonials/2.avif'
 import testimonial1 from '../assets/testimonials/1.avif'
 import testimonial3 from '../assets/testimonials/3.avif'
-import family from '../assets/family.avif'
+import fam from '../assets/fam.avif'
 
 
 export const profilePicture = profilePic
@@ -169,4 +169,4 @@ export const TESTIMONIAL_CONTENT = [
     },
 ]
 
-const familyPic = family
+export const family = fam

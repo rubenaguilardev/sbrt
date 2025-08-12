@@ -30,7 +30,12 @@ const WorkSections = () => {
             ))}
 
             blogs={section.id === 2 && section.content.map((post, index) => (
-                    <a key={index}  href={post.url}>
+                    <a 
+                        key={index}  
+                        href={post.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
                         <div className='flex flex-col mb-2 mt-4 snap-center transition-transform duration-300 hover:scale-102'>
                             <div className='w-[220px] md:w-[260px] object-fit'>
                                 <img src={post.image} className='rounded-t-lg' alt="blog cover image"/>

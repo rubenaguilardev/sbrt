@@ -6,7 +6,7 @@ const Home = () => {
                 <h1 className="text-6xl md:text-7xl lg:text-[5.5rem] xl:text-8xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent mb-6 leading-[1.25]">
                     Jazmin Buffington
                 </h1>
-                <p className="text-gray-400 text-xl font-bold max-w-lg md:max-w-xl lg:max-w-2xl mb-1 mx-auto">CREATIVITY WITH A STRATEGY</p>
+                <p className="text-gray-400 text-xl font-bold max-w-lg md:max-w-xl lg:max-w-2xl mb-3 mx-auto">CREATIVITY WITH A STRATEGY</p>
                 <p className="text-gray-400 text-lg mb-8 max-w-lg md:max-w-xl lg:max-w-2xl mx-auto">
                     Helping brands shine across social, digital, design, and events since 2011.
                 </p>

@@ -78,7 +78,8 @@ const Gallery = () => {
                     <img
                         key={item.id}
                         loading="lazy"
-                        src={window.innerWidth < 768 ? item.sm : item.img}
+                        src={item.sm}
+
                         alt={''}
                         className="w-full h-110 sm:h-120 md:h-140 lg:h-160 xl:h-180 object-cover rounded-lg"
                     />
@@ -86,15 +87,15 @@ const Gallery = () => {
                 ))}
                 </Carousel>
                 {open && (
-  <Lightbox
-    open={open}
-    close={() => setOpen(false)}
-    index={photoIndex}
-    slides={PHOTOS.map(p => ({
-      src: window.innerWidth < 768 ? p.sm : p.img
-    }))}
-  />
-)}
+                  <Lightbox
+                    open={open}
+                    close={() => setOpen(false)}
+                    index={photoIndex}
+                    slides={PHOTOS.map(p => ({
+                      src: window.innerWidth < 768 ? p.sm : p.img
+                    }))}
+                  />
+                )}
             </div>
             <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-[72.5rem] px-3 md:px-1">
                 <Carousel

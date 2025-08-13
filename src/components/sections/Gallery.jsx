@@ -1,9 +1,9 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { PHOTOS } from "../../constants/gallery";
-import { useState } from 'react'
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
+import { PHOTOS } from "../../constants/gallery"
+import { useState, useEffect } from 'react'
 import Lightbox from 'yet-another-react-lightbox'
-import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/styles.css"
 import RevealOnScroll from "../RevealOnScroll"
 
 const responsive = {
@@ -11,14 +11,14 @@ const responsive = {
   desktop: { breakpoint: { max:1284, min: 801 }, items: 2},
   tablet:  { breakpoint: { max: 800, min: 464 },  items: 1},
   mobile:  { breakpoint: { max: 464,  min: 0 },    items:  1},
-};
+}
 
 const bottomSlider = {
   desktopXl: { breakpoint: { max: 3000, min: 1285 }, items: 5 },
   desktop: { breakpoint: { max:1284, min: 1025 }, items: 4},
   tablet:  { breakpoint: { max: 1024, min: 464 },  items: 3 },
   mobile:  { breakpoint: { max: 464,  min: 0 },    items: 2 },
-};
+}
 
 const CustomLeftArrow = ({ onClick }) => {
   return (
@@ -46,11 +46,19 @@ const Gallery = () => {
 
     const [open, setOpen] = useState(false)
     const [photoIndex, setPhotoIndex] = useState(0)
+    const [isMobile, setIsMobile] = useState(false)
 
     const openLightbox = index => {
         setPhotoIndex(index)
         setOpen(true)
     }
+
+    useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth < 768)
+      handleResize()
+      window.addEventListener('resize', handleResize)
+      return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
   return (
     <RevealOnScroll>
@@ -91,9 +99,7 @@ const Gallery = () => {
                     open={open}
                     close={() => setOpen(false)}
                     index={photoIndex}
-                    slides={PHOTOS.map(p => ({
-                      src: window.innerWidth < 768 ? p.sm : p.img
-                    }))}
+                    slides={PHOTOS.map(p => ({ src: isMobile ? p.sm : p.img }))}
                   />
                 )}
             </div>
@@ -102,8 +108,8 @@ const Gallery = () => {
                 responsive={bottomSlider}
                 infinite
                 autoPlay={true}
-                autoPlaySpeed={2000}
-                transitionDuration={2000}
+                autoPlaySpeed={3000}
+                transitionDuration={1000}
                 customTransition="all 1s ease-in-out"
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}

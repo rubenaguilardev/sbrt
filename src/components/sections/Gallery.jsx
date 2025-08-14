@@ -24,8 +24,7 @@ const ArrowButton = ({ direction, onClick }) => {
 const Gallery = () => {
 
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel(
-    { loop: true, align: "start" },
-    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+    { loop: false},
 
   )
 

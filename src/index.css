@@ -73,29 +73,7 @@ body {
   transform: translateY(0);
 }
 
-.yarl__button {
-  background-color: rgba(59, 130, 246, 0.8) !important;
-  color: #f3f4f6 !important;
-  border-radius: 0.3rem !important;
-  padding: 0.2rem .4rem !important;
-  transition: all 0.3s ease !important;
-}
 
-.yarl__button:hover {
-  background-color: rgba(59, 130, 246, 0.7) !important;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important;
-}
-
-@media (max-width: 640px) {
-  .yarl__button {
-    background-color: transparent !important;
-  }
-
-  .yarl__button:hover {
-    background-color: transparent !important;
-    box-shadow: none !important;
-  }
-}
 .embla {
   margin: auto;
   --slide-height: 30rem;
@@ -107,14 +85,14 @@ body {
   .embla {
     --slide-spacing: .8rem;
     --slide-height: 38rem;
-    --slide-size: 55%;
+    --slide-size: 60%;
   }
 }
 
 @media (min-width: 1280px) {
   .embla {
     --slide-height: 50rem;
-    --slide-size: 50%;
+    --slide-size: 60%;
   }
 }
 

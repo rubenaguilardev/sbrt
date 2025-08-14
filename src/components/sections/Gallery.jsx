@@ -1,13 +1,20 @@
-import { useState, useEffect } from "react"
-import useEmblaCarousel from "embla-carousel-react"
-import Autoplay from "embla-carousel-autoplay"
-import Lightbox from "yet-another-react-lightbox"
-import "yet-another-react-lightbox/styles.css"
-import { PHOTOS } from "../../constants/gallery"
-import RevealOnScroll from "../RevealOnScroll"
+import React, { useCallback, useEffect, useRef } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
+import {PHOTOS} from '../../constants/gallery'
 
 
-const ArrowButton = ({ direction, onClick }) => {
+
+const TWEEN_FACTOR_BASE = 0.84
+
+const numberWithinRange = (number, min, max) =>
+  Math.min(Math.max(number, min), max)
+
+const Gallery = (props) => {
+  const { slides, options } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const tweenFactor = useRef(0)
+
+  const ArrowButton = ({ direction, onClick }) => {
   const isLeft = direction === "left"
   return (
     <button
@@ -21,99 +28,88 @@ const ArrowButton = ({ direction, onClick }) => {
   )
 }
 
-const Gallery = () => {
-
-  const [emblaMainRef, emblaMainApi] = useEmblaCarousel(
-    { loop: false},
-
-  )
-
-  const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
-    loop: false,
-    containScroll: "keepSnaps",
-    dragFree: true
-  })
-
-  const [open, setOpen] = useState(false)
-  const [photoIndex, setPhotoIndex] = useState(0)
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768)
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
+  const setTweenFactor = useCallback((emblaApi) => {
+    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
   }, [])
 
-  const openLightbox = (index) => {
-    setPhotoIndex(index)
-    setOpen(true)
-  }
+  const tweenOpacity = useCallback((emblaApi, eventName) => {
+    const engine = emblaApi.internalEngine()
+    const scrollProgress = emblaApi.scrollProgress()
+    const slidesInView = emblaApi.slidesInView()
+    const isScrollEvent = eventName === 'scroll'
 
-  const scrollTo = (index) => {
-    if (!emblaMainApi || !emblaThumbsApi) return
-    emblaMainApi.scrollTo(index)
-  }
+    emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
+      let diffToTarget = scrollSnap - scrollProgress
+      const slidesInSnap = engine.slideRegistry[snapIndex]
+
+      slidesInSnap.forEach((slideIndex) => {
+        if (isScrollEvent && !slidesInView.includes(slideIndex)) return
+
+        if (engine.options.loop) {
+          engine.slideLooper.loopPoints.forEach((loopItem) => {
+            const target = loopItem.target()
+
+            if (slideIndex === loopItem.index && target !== 0) {
+              const sign = Math.sign(target)
+
+              if (sign === -1) {
+                diffToTarget = scrollSnap - (1 + scrollProgress)
+              }
+              if (sign === 1) {
+                diffToTarget = scrollSnap + (1 - scrollProgress)
+              }
+            }
+          })
+        }
+
+        const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
+        const opacity = numberWithinRange(tweenValue, 0, 1).toString()
+        emblaApi.slideNodes()[slideIndex].style.opacity = opacity
+      })
+    })
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    setTweenFactor(emblaApi)
+    tweenOpacity(emblaApi)
+    emblaApi
+      .on('reInit', setTweenFactor)
+      .on('reInit', tweenOpacity)
+      .on('scroll', tweenOpacity)
+      .on('slideFocus', tweenOpacity)
+  }, [emblaApi, tweenOpacity])
 
   return (
-    <RevealOnScroll>
-      <section id="gallery" className="flex flex-col justify-center items-center mb-30">
-        <div className="relative w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-[72.5rem] px-2 md:px-1 mb-3">
-          <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300">My <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Photography </span></h2>
-          <div className="embla" ref={emblaMainRef}>
-            <div className="embla__container">
-              {PHOTOS.map((item, index) => (
-                <div
-                  className="embla__slide px-[6px] cursor-zoom-in"
-                  key={item.id}
-                  onClick={() => openLightbox(index)}
-                >
-                  <img
-                    loading="lazy"
-                    src={item.img}
-                    alt=""
-                    className="w-115 h-110 sm:h-120 md:h-140 lg:h-160 xl:h-180 object-cover rounded-lg"
-                  />
-                </div>
-              ))}
+     <section id="gallery" className="flex flex-col justify-center items-center mb-30">
+      <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300">My <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Photography </span></h2>
+      <div className="embla  relative w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-[72.5rem] px-2 md:px-1 mb-3">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container">
+          {PHOTOS.map((item, index) => (
+            <div className="embla__slide" key={index}>
+              <img
+                className="embla__slide__img"
+                src={item.sm}
+                alt="Your alt text"
+              />
             </div>
-          </div>
-
-          <ArrowButton direction="left" onClick={() => emblaMainApi?.scrollPrev()} />
-          <ArrowButton direction="right" onClick={() => emblaMainApi?.scrollNext()} />
-
-          {open && (
-            <Lightbox
-              open={open}
-              close={() => setOpen(false)}
-              index={photoIndex}
-              slides={PHOTOS.map((p) => ({ src: isMobile ? p.sm : p.img }))}
-            />
-          )}
+          ))}
         </div>
+      </div>
+      <ArrowButton direction="left" onClick={() => emblaApi?.scrollPrev()} />
+      <ArrowButton direction="right" onClick={() => emblaApi?.scrollNext()} />
+      </div>
+      
+      
+      
 
-        <div className="w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-[72.5rem] px-4 md:2">
-          <div className="embla" ref={emblaThumbsRef}>
-            <div className="embla__container">
-              {PHOTOS.map((item, index) => (
-                <div
-                  key={item.id}
-                  className="embla__slide px-[6px] overflow-hidden cursor-pointer"
-                  onClick={() => scrollTo(index)}
-                >
-                  <img
-                    loading="lazy"
-                    src={item.sm}
-                    alt="index"
-                    className="w-full h-52 object-cover rounded-lg transition-all duration-300 ease-in hover:scale-125"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    </RevealOnScroll>
+     
+   
+
+    </section>
+    
   )
 }
 

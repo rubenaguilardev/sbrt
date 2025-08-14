@@ -89,7 +89,7 @@ const Gallery = (props) => {
   return (
      <section id="gallery" className="flex flex-col justify-center items-center mb-30">
       <h2 className="text-3xl text-center font-bold mb-5 md:mb-7 text-gray-300">My <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Photography </span></h2>
-      <div className="embla  relative w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-[72.5rem] px-2 md:px-1 mb-3">
+      <div className="embla  relative w-full md:max-w-[44rem] lg:max-w-[58rem] max-w-6xl xl:max-w-[72.5rem] md:px-1 mb-3">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {PHOTOS.map((item, index) => (

@@ -1,6 +1,8 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import {PHOTOS} from '../../constants/gallery'
+import Lightbox from "yet-another-react-lightbox"
+import "yet-another-react-lightbox/styles.css"
 
 
 
@@ -10,9 +12,12 @@ const numberWithinRange = (number, min, max) =>
   Math.min(Math.max(number, min), max)
 
 const Gallery = (props) => {
+
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const tweenFactor = useRef(0)
+  const [open, setOpen] = useState(false)
+  const [photoIndex, setPhotoIndex] = useState(0)
 
   const ArrowButton = ({ direction, onClick }) => {
   const isLeft = direction === "left"
@@ -90,9 +95,13 @@ const Gallery = (props) => {
           {PHOTOS.map((item, index) => (
             <div className="embla__slide" key={index}>
               <img
-                className="embla__slide__img"
+                className="embla__slide__img cursor-zoom-in"
                 src={item.sm}
                 alt="Your alt text"
+                onClick={() => {
+                  setPhotoIndex(index)
+                  setOpen(true)
+                }}
               />
             </div>
           ))}
@@ -102,12 +111,14 @@ const Gallery = (props) => {
       <ArrowButton direction="right" onClick={() => emblaApi?.scrollNext()} />
       </div>
       
-      
-      
-
-     
-   
-
+      {open && (
+            <Lightbox
+              open={open}
+              close={() => setOpen(false)}
+              index={photoIndex}
+              slides={PHOTOS.map((p) => ({ src: p.img }))}
+            />
+          )}
     </section>
     
   )

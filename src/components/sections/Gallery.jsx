@@ -115,7 +115,7 @@ return (
                   loading="lazy"
                   className="embla__slide__img cursor-zoom-in rounded-lg"
                   src={item.sm}
-                  alt={`${index}`}
+                  alt={`photo ${index}`}
                   onClick={() => {
                     setPhotoIndex(index)
                     setOpen(true)

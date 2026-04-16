@@ -1,5 +1,6 @@
 import RevealOnScroll from "../RevealOnScroll";
 import jazz from "../../assets/jazz.avif";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa6";
 
 const About = () => {
   return (
@@ -31,6 +32,21 @@ const About = () => {
                   Intrigued? Let’s connect and create something worth
                   remembering.
                 </p>
+              </div>
+              <div className="flex justify-end mr-2 text-4xl text-blue-600 md:hidden gap-2">
+                <div>
+                  <a
+                    href="https://www.linkedin.com/in/jazmin-aguilar-buffington/"
+                    className="text-4xl"
+                  >
+                    <FaLinkedin />
+                  </a>
+                </div>
+                <div>
+                  <a href="mailto:jazmin.a.buffington@gmail.com">
+                    <FaEnvelope />
+                  </a>
+                </div>
               </div>
               <a
                 target="_blank"

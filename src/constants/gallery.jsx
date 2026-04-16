@@ -3,12 +3,10 @@ import photo2sm from "../assets/gallery/sm002.avif";
 import photo3sm from "../assets/gallery/sm003.avif";
 import photo4sm from "../assets/gallery/sm004.avif";
 import photo5sm from "../assets/gallery/sm005.avif";
-import photo6sm from "../assets/gallery/sm006.avif";
 import photo7sm from "../assets/gallery/sm007.avif";
 import photo8sm from "../assets/gallery/sm008.avif";
 import photo9sm from "../assets/gallery/sm009.avif";
 import photo10sm from "../assets/gallery/sm010.avif";
-import photo11sm from "../assets/gallery/sm011.avif";
 import photo12sm from "../assets/gallery/sm012.avif";
 import photo13sm from "../assets/gallery/sm013.avif";
 import photo14sm from "../assets/gallery/sm014.avif";
@@ -27,7 +25,6 @@ import photo26sm from "../assets/gallery/sm026.avif";
 import photo27sm from "../assets/gallery/sm027.avif";
 import photo28sm from "../assets/gallery/sm028.avif";
 import photo29sm from "../assets/gallery/sm029.avif";
-import photo30sm from "../assets/gallery/sm030.avif";
 import photo31sm from "../assets/gallery/sm031.avif";
 import photo32sm from "../assets/gallery/sm032.avif";
 import photo33sm from "../assets/gallery/sm033.avif";
@@ -106,12 +103,10 @@ import photo2 from "../assets/gallery/002.avif";
 import photo3 from "../assets/gallery/003.avif";
 import photo4 from "../assets/gallery/004.avif";
 import photo5 from "../assets/gallery/005.avif";
-import photo6 from "../assets/gallery/006.avif";
 import photo7 from "../assets/gallery/007.avif";
 import photo8 from "../assets/gallery/008.avif";
 import photo9 from "../assets/gallery/009.avif";
 import photo10 from "../assets/gallery/010.avif";
-import photo11 from "../assets/gallery/011.avif";
 import photo12 from "../assets/gallery/012.avif";
 import photo13 from "../assets/gallery/013.avif";
 import photo14 from "../assets/gallery/014.avif";
@@ -130,7 +125,6 @@ import photo26 from "../assets/gallery/026.avif";
 import photo27 from "../assets/gallery/027.avif";
 import photo28 from "../assets/gallery/028.avif";
 import photo29 from "../assets/gallery/029.avif";
-import photo30 from "../assets/gallery/030.avif";
 import photo31 from "../assets/gallery/031.avif";
 import photo32 from "../assets/gallery/032.avif";
 import photo33 from "../assets/gallery/033.avif";
@@ -213,7 +207,6 @@ import photo6xs from "../assets/gallery/xs006.avif";
 import photo7xs from "../assets/gallery/xs007.avif";
 import photo8xs from "../assets/gallery/xs008.avif";
 import photo9xs from "../assets/gallery/xs009.avif";
-import photo10xs from "../assets/gallery/xs010.avif";
 import photo11xs from "../assets/gallery/xs011.avif";
 import photo12xs from "../assets/gallery/xs012.avif";
 import photo13xs from "../assets/gallery/xs013.avif";
@@ -233,7 +226,6 @@ import photo26xs from "../assets/gallery/xs026.avif";
 import photo27xs from "../assets/gallery/xs027.avif";
 import photo28xs from "../assets/gallery/xs028.avif";
 import photo29xs from "../assets/gallery/xs029.avif";
-import photo30xs from "../assets/gallery/xs030.avif";
 import photo31xs from "../assets/gallery/xs031.avif";
 import photo32xs from "../assets/gallery/xs032.avif";
 import photo33xs from "../assets/gallery/xs033.avif";
@@ -259,12 +251,10 @@ import photo52xs from "../assets/gallery/xs052.avif";
 import photo53xs from "../assets/gallery/xs053.avif";
 import photo54xs from "../assets/gallery/xs054.avif";
 import photo55xs from "../assets/gallery/xs055.avif";
-import photo56xs from "../assets/gallery/xs056.avif";
 import photo57xs from "../assets/gallery/xs057.avif";
 import photo58xs from "../assets/gallery/xs058.avif";
 import photo59xs from "../assets/gallery/xs059.avif";
 import photo60xs from "../assets/gallery/xs060.avif";
-import photo61xs from "../assets/gallery/xs061.avif";
 import photo62xs from "../assets/gallery/xs062.avif";
 import photo63xs from "../assets/gallery/xs063.avif";
 import photo64xs from "../assets/gallery/xs064.avif";
@@ -340,12 +330,6 @@ export const PHOTOS = [
     id: 5,
   },
   {
-    sm: photo6sm,
-    xs: photo56xs,
-    img: photo6,
-    id: 6,
-  },
-  {
     sm: photo7sm,
     xs: photo57xs,
     img: photo7,
@@ -368,12 +352,6 @@ export const PHOTOS = [
     xs: photo50xs,
     img: photo10,
     id: 10,
-  },
-  {
-    sm: photo11sm,
-    xs: photo61xs,
-    img: photo11,
-    id: 11,
   },
   {
     sm: photo12sm,
@@ -482,12 +460,6 @@ export const PHOTOS = [
     xs: photo29xs,
     img: photo29,
     id: 29,
-  },
-  {
-    sm: photo30sm,
-    xs: photo30xs,
-    img: photo30,
-    id: 30,
   },
   {
     sm: photo31sm,

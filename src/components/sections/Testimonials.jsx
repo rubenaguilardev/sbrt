@@ -28,7 +28,7 @@ const Testimonials = () => {
   return (
     <section className="flex justify-center items-center py-32">
       <div
-        className="container mx-auto md:px-6 lg:px-8 relative z-10 h-[540px] group rounded-xlshadow-2xl"
+        className="container mx-auto md:px-6 lg:px-8 relative z-10 h-[540px] group rounded-xl shadow-2xl"
         {...swipeHandlers}
       >
         <h2 className="text-3xl md:text-4xl text-center font-bold p-4 mb-5 md:mb-8">

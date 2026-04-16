@@ -14,6 +14,16 @@ import design3 from "../assets/design/3.avif";
 import design4 from "../assets/design/4.avif";
 import design5 from "../assets/design/5.avif";
 import design6 from "../assets/design/6.avif";
+import design7 from "../assets/design/7.avif";
+import design8 from "../assets/design/8.avif";
+import design9 from "../assets/design/9.avif";
+import design10 from "../assets/design/10.avif";
+import design11 from "../assets/design/11.avif";
+import design12 from "../assets/design/12.avif";
+import design13 from "../assets/design/13.avif";
+import design14 from "../assets/design/14.avif";
+import design15 from "../assets/design/15.avif";
+import design16 from "../assets/design/16.avif";
 import blog1 from "../assets/blogs/1.avif";
 import blog2 from "../assets/blogs/2.avif";
 import blog3 from "../assets/blogs/3.avif";
@@ -86,7 +96,24 @@ export const MY_WORK = [
     id: 1,
     icon: <i className="fa fa-palette" />,
     color: `bg-gradient-to-br from-pink-500 via-rose-400 to-red-400`,
-    content: [design1, design2, design3, design4, design5, design6],
+    content: [
+      design1,
+      design2,
+      design3,
+      design4,
+      design5,
+      design6,
+      design7,
+      design8,
+      design9,
+      design10,
+      design11,
+      design12,
+      design13,
+      design14,
+      design15,
+      design16,
+    ],
   },
 
   {

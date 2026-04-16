@@ -28,7 +28,7 @@ const Testimonials = () => {
   return (
     <section className="flex justify-center items-center py-32">
       <div
-        className="container mx-auto md:px-6 lg:px-8 relative z-10 h-[540px] group rounded-xl shadow-2xl"
+        className="container mx-auto md:px-6 lg:px-8 relative z-10 h-[540px] group rounded-2xl"
         {...swipeHandlers}
       >
         <h2 className="text-3xl md:text-4xl text-center font-bold p-4 mb-5 md:mb-8">
@@ -44,7 +44,7 @@ const Testimonials = () => {
               key={index}
               src={testimonial.background}
               alt={testimonial.author}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out md:rounded-xl ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out md:rounded-2xl ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"}`}
             />
           ))}
           <div className="absolute inset-0 bg-black/60 md:rounded-xl z-20">

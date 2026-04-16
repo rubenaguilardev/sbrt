@@ -43,10 +43,10 @@ const Skills = () => {
             key={index}
             src={window.innerWidth < 768 ? skill.image : skill.imageSM}
             alt={`picture of ${skill.title}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out md:rounded-xl ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out md:rounded-2xl ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"}`}
           />
         ))}
-        <div className="absolute inset-0 bg-black/50 md:rounded-xl z-20">
+        <div className="absolute inset-0 bg-black/50 md:rounded-2xl z-20">
           <div className="flex justify-center items-center md:justify-between h-full w-full">
             <button
               onClick={prevSlide}
